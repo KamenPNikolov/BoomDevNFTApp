@@ -3,6 +3,7 @@ import Container from "@mui/material/Container";
 import Link from "../link/Link";
 import styles from "./Example.module.scss";
 import classNames from "classnames";
+import Logo from "../logo/Logo";
 
 export default function Copyright() {
   return (
@@ -11,6 +12,8 @@ export default function Copyright() {
         <Paper className={classNames(styles.paper)}>
           <Link href="/about" color="secondary">
             Hi
+            <Logo type = "muted"></Logo>
+
           </Link>
         </Paper>
       </Container>
