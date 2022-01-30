@@ -1,11 +1,11 @@
 import * as React from 'react';
 import classNames from "classnames";
 
-export default function Logo(props={type:"default"}) {
+export default function Logo({type = "default"}) {
 
   return (
     <div >
-      <img src =  {props.type=="muted"?"/images/logo-muted.svg" :"/images/logo.svg"}></img>
+      <img src =  {type=="muted"?"/images/logo-muted.svg" :"/images/logo.svg"}></img>
     </div>
   );
 }
