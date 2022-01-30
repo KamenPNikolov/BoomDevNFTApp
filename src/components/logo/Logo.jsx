@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classNames from "classnames";
 
-export default function Logo(props) {
+export default function Logo(props={type:"default"}) {
 
   return (
     <div >
@@ -9,4 +9,5 @@ export default function Logo(props) {
     </div>
   );
 }
+
 
