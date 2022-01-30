@@ -11,10 +11,10 @@ export default function User({name = "", info = "",avatar = "",size = 55, verifi
     return (
     <div className={classNames(styles.user)}  style = {{width: size*3}} >  
        <Avatar className={classNames(styles.avatar)} verified = {verified} size = {size} url = {avatar}></Avatar>
-       
-        <b className={classNames(styles.name)} > {name}</b>
-        <b className={classNames(styles.info)}> {info}</b>
-        
+       <div className={classNames(styles.innerGrid)}>
+        <div className={classNames(styles.name)}  > {name}</div>
+        <div className={classNames(styles.info)}> {info}</div>
+        </div>
     </div>      
     );
   }

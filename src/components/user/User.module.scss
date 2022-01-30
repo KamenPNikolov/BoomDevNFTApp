@@ -3,13 +3,13 @@
 .user{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto  auto;
+    grid-template-rows: auto ;
   background-color: colors.$background_default;
   padding: 3px;
   grid-gap: 10px;  
 
 }
-.name {
+.name{
     color: colors.$text_primary;
     font-size : 1rem;
     
@@ -23,11 +23,11 @@
     grid-row-end: span 3;
     background-color: colors.$background_default ;
 }
-/*
+
 .innerGrid{
     display: grid;
     grid-template-columns:auto;
     grid-template-rows: auto auto;
     background-color: colors.$background_default;
     padding: 3px;
-}*/
+}
