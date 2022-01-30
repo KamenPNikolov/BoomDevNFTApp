@@ -10,7 +10,7 @@ import Avatar from "../Avatar/Avatar";
 export default function Copyright() {
   return (
     <div className={classNames(styles.wrapper)}>
-      <Avatar verified = {true} size = {100} url = "/images/avatar.png"></Avatar>
+      <Avatar verified = {true} size = {180} url = "/images/avatar.png"></Avatar>
       <Container className={classNames(styles.container)} maxWidth="xl">
         
         <Paper className={classNames(styles.paper)}>
