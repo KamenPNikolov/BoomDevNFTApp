@@ -14,7 +14,7 @@ export default function Avatar({size = 90, url = "",verified = false}) {
     return (
     <div className={classNames(styles.avatar)} style = {{width: size, height: size,  display: "flex"}}>
       <img src= {url} className={classNames(styles.image)} style = {{flex:1 , width: undefined, height: undefined, resizeMode: 'contain'}}></img>
-      <img className={classNames(styles.badge)} src={"/images/verified.svg"}  invisible = {!verified}></img>
+      <img className={classNames(styles.badge)} src={"/images/verified.svg"}  invisible = {verified?"false":"true"}></img>
      
     </div>      
     );

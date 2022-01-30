@@ -1,0 +1,29 @@
+@use "../../styles/colors";
+
+.user{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto ;
+  background-color: colors.$background_default;
+  padding: 3px;
+  grid-gap: 10px;  
+
+}
+.name {
+    color: colors.$text_primary;
+    
+}
+.info{
+    color: colors.$secondary_main;
+
+}
+.avatar{
+    background-color: colors.$background_default ;
+}
+.innerGrid{
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: auto auto;
+    background-color: colors.$background_default;
+    padding: 3px;
+}

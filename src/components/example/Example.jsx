@@ -6,11 +6,12 @@ import classNames from "classnames";
 import Logo from "../logo/Logo";
 import Header from "../header/Header";
 import Avatar from "../avatar/Avatar";
+import User from "../user/User";
 
 export default function Copyright() {
   return (
     <div className={classNames(styles.wrapper)}>
-      <Avatar verified = {true} size = {180} url = "/images/avatar.png"></Avatar>
+      <User verified = {true} size = {60} avatar = "/images/avatar.png" name = "kemimaro" info="140 items" ></User>  
       <Container className={classNames(styles.container)} maxWidth="xl">
         
         <Paper className={classNames(styles.paper)}>
