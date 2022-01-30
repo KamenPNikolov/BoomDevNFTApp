@@ -11,11 +11,12 @@
 }
 .name {
     color: colors.$text_primary;
+    font-size : 1rem;
     
 }
 .info{
     color: colors.$secondary_main;
-
+    font-size : 1rem;
 }
 .avatar{
     grid-column-start: 1;
