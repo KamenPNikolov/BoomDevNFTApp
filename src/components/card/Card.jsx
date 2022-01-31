@@ -30,7 +30,7 @@ export default function Card({name="",likes = 0, mediaUrl = "", user = {avatar: 
       />
      <CardContent>
        <div className={classNames(styles.title)}>{name}</div> 
-        <b className={classNames(styles.price)}>{price+" "+currency}</b>
+        <b className={classNames(styles.price)}>{"~"+ price+" "+currency}</b>
         <Chip color = "secondary" className={classNames(styles.likes)} variant="outlined" icon = {<FavoriteIcon></FavoriteIcon>} label = {millify(likes)}></Chip>
       </CardContent>
       <CardActions></CardActions>
