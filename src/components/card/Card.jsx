@@ -13,7 +13,7 @@ import millify from "millify";
 import Chip from '@mui/material/Chip';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-export default function Card({name="",likes = 0, mediaUrl = "", user = {avatar: {url : ""},verified: false}, price = "", currency = ""}){
+export default function Card({title="",likes = 0, mediaUrl = "", user = {avatar: {url : ""},verified: false}, price = "", currency = ""}){
 
     return (
     
@@ -29,7 +29,7 @@ export default function Card({name="",likes = 0, mediaUrl = "", user = {avatar: 
         alt="NFT Media"
       />
      <CardContent>
-       <div className={classNames(styles.title)}>{name}</div> 
+       <div className={classNames(styles.title)}>{title}</div> 
         <b className={classNames(styles.price)}>{"~"+ price+" "+currency}</b>
         <Chip color = "secondary" className={classNames(styles.likes)} variant="outlined" icon = {<FavoriteIcon></FavoriteIcon>} label = {millify(likes)}></Chip>
       </CardContent>

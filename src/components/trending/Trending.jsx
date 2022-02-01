@@ -11,6 +11,7 @@ export default function Trending({cards = []}){
     const [c1,c2,c3,c4] = cards;
 
     return (
+        <div className={classNames(styles.wrapper)}>
     <Container className={classNames(styles.container)} maxWidth="xl">
     <h1 className={classNames(styles.heading)}>Trending</h1>
     <Select className={classNames(styles.select)} defaultValue = {7}  label="Time" >
@@ -20,18 +21,19 @@ export default function Trending({cards = []}){
     </Select> 
     <Grid className={classNames(styles.grid)}  container spacing={3}>
         <Grid item lg>
-        <Card name ={c1.name} mediaUrl={c1.mediaUrl} user = {c1.user} price = {c1.price} currency =  {c1.currency} likes={c1.likes} ></Card>
+        <Card title ={c1.title} mediaUrl={c1.mediaUrl} user = {c1.user} price = {c1.price} currency =  {c1.currency} likes={c1.likes} ></Card>
         </Grid>
         <Grid item lg>
-        <Card name={c2.name} mediaUrl={c2.mediaUrl} user = {c2.user} price = {c2.price} currency =  {c2.currency} likes={c2.likes} ></Card>
+        <Card title={c2.title} mediaUrl={c2.mediaUrl} user = {c2.user} price = {c2.price} currency =  {c2.currency} likes={c2.likes} ></Card>
         </Grid>
         <Grid item lg>
-        <Card name= {c3.name} mediaUrl={c3.mediaUrl} user = {c3.user} price = {c3.price} currency =  {c3.currency} likes={c3.likes} ></Card>
+        <Card title= {c3.title} mediaUrl={c3.mediaUrl} user = {c3.user} price = {c3.price} currency =  {c3.currency} likes={c3.likes} ></Card>
         </Grid>
         <Grid item lg>
-        <Card name = {c4.name} mediaUrl={c4.mediaUrl} user = {c4.user} price = {c4.price} currency =  {c4.currency} likes={c4.likes} ></Card>
+        <Card title = {c4.title} mediaUrl={c4.mediaUrl} user = {c4.user} price = {c4.price} currency =  {c4.currency} likes={c4.likes} ></Card>
         </Grid>
       </Grid>
     </Container>
+    </div>
 );
 }

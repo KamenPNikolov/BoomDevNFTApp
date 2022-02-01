@@ -13,28 +13,28 @@ import Trending from "../trending/Trending";
 export default function Copyright() {
   const userProp = {avatar: {url: "/images/avatar.png"},verified: true};
   const propsForTrending = [
-     {name:"Ivy",
+     {title:"Ivy",
      user:{avatar:{url:"images/avatar.png"},verified:true},
      mediaUrl:"images/nft.jpg",
      price:1,
      currency:"ETH"
     }
     ,{
-      name:"Judie",
+      title:"Judie",
       user:{avatar:{url:"images/avatar.png"},verified:true},
       mediaUrl:"images/nft.jpg",
       price:2.3,
       currency:"ETH" 
     }
     ,{
-      name:"Juniper",
+      title:"Juniper",
       user:{avatar:{url:"images/avatar.png"},verified:true},
       mediaUrl:"images/nft.jpg",
       price:5,
       currency:"ETH" 
     }
     ,{
-      name:"Maple",
+      title:"Maple",
       user:{avatar:{url:"images/avatar.png"},verified:true},
       mediaUrl:"images/nft.jpg",
       price:10,
@@ -46,7 +46,7 @@ export default function Copyright() {
 
      {/*  <User verified = {true} size = {60} avatar = "/images/avatar.png" name = "kemimaro" info="140 items" ></User> */ }
       <Trending cards = {propsForTrending}></Trending>
-      <Card name = "Monkey" mediaUrl="https://cdn.vox-cdn.com/thumbor/2xj1ySLIz1EZ49NvSsPzq8Itjyg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23084330/bored_ape_nft_accidental_.jpg"
+      <Card title = "Monkey" mediaUrl="https://cdn.vox-cdn.com/thumbor/2xj1ySLIz1EZ49NvSsPzq8Itjyg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23084330/bored_ape_nft_accidental_.jpg"
       user = {userProp} price = "12.4" currency = "ETH" likes={1100}
       >
         </Card> 
