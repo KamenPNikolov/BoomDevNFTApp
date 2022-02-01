@@ -13,28 +13,28 @@ import Trending from "../trending/Trending";
 export default function Copyright() {
   const userProp = {avatar: {url: "/images/avatar.png"},verified: true};
   const propsForTrending = [
-     {title:"Ivy",
+     {name:"Ivy",
      user:{avatar:{url:"images/avatar.png"},verified:true},
      mediaUrl:"images/nft.jpg",
      price:1,
      currency:"ETH"
     }
     ,{
-      title:"Judie",
+      name:"Judie",
       user:{avatar:{url:"images/avatar.png"},verified:true},
       mediaUrl:"images/nft.jpg",
       price:2.3,
       currency:"ETH" 
     }
     ,{
-      title:"Juniper",
+      name:"Juniper",
       user:{avatar:{url:"images/avatar.png"},verified:true},
       mediaUrl:"images/nft.jpg",
       price:5,
       currency:"ETH" 
     }
     ,{
-      title:"Maple",
+      name:"Maples",
       user:{avatar:{url:"images/avatar.png"},verified:true},
       mediaUrl:"images/nft.jpg",
       price:10,
