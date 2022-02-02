@@ -13,12 +13,12 @@ export default function Footer() {
     return (
     <div className={classNames(styles.wrapper)}>
       <Container className={classNames(styles.container)}>
-      <Grid container  direction="row" justifyContent="space-around" alignItems="center">
+      <Grid container  direction="row" justifyContent="space-evenly" alignItems="center">
         <Grid item xs="2">
         <Logo type = "muted"></Logo>
         </Grid>
-        <Grid item xs = "4" >
-        <p>BUM All rights reserved</p>
+        <Grid item xs = "5" >
+        <p style ={{marginLeft:"30%"}}>BUM All rights reserved</p>
         </Grid>
         <Grid item xs = "2">
         <Button className={classNames(styles.button)} size = "small" variant="text">Privacy Policy</Button>
