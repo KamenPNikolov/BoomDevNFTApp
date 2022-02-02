@@ -1,0 +1,33 @@
+import * as React from 'react';
+import classNames from "classnames";
+import Logo from '../logo/Logo';
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import styles from "./Footer.module.scss"
+import Grid from "@mui/material/Grid";
+
+
+
+export default function Footer() {
+
+    return (
+    <div className={classNames(styles.wrapper)}>
+      <Container className={classNames(styles.container)}>
+      <Grid container  direction="row" justifyContent="space-around" alignItems="center">
+        <Grid item xs="2">
+        <Logo type = "muted"></Logo>
+        </Grid>
+        <Grid item xs = "4" >
+        <p>BUM All rights reserved</p>
+        </Grid>
+        <Grid item xs = "2">
+        <Button className={classNames(styles.button)} size = "small" variant="text">Privacy Policy</Button>
+        </Grid>
+        <Grid item xs = "2">
+        <Button   className={classNames(styles.button)} variant="text" size = "small">Cookie Policy</Button>
+        </Grid>
+      </Grid>
+      </Container>
+    </div>      
+    );
+  }
