@@ -32,7 +32,7 @@ export default function Card({name="",likes = 0, mediaUrl = "", user = {avatar: 
           <Avatar verified = {user.verified} url = {user.avatar.url}></Avatar>
         }
       />
-      <div className={classNames(styles.badge)} ><Circle></Circle><b>LIVE</b></div>
+      {liveIcon}
       <CardMedia className={classNames(styles.media)}
         component="img"
         image={mediaUrl}
