@@ -20,7 +20,8 @@ export default function Copyright() {
      user:{avatar:{url:"images/avatar.png"},verified:true},
      mediaUrl:"images/nft.jpg",
      price:1,
-     currency:"ETH"
+     currency:"ETH",
+     
     }
     ,{
       name:"Judie",
@@ -67,9 +68,9 @@ export default function Copyright() {
       <Trending cards = {propsForTrending}></Trending>
       <How items = {itemsForHow}  title = "How it works" description = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
        link = "https://en.wikipedia.org/wiki/Non-fungible_token" ></How>
-     { /*<Card name = "Monkey" mediaUrl="https://cdn.vox-cdn.com/thumbor/2xj1ySLIz1EZ49NvSsPzq8Itjyg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23084330/bored_ape_nft_accidental_.jpg"
-      user = {userProp} price = "12.4" currency = "ETH" likes={1100}
-      > </Card> */}
+     <Card name = "Monkey" mediaUrl="https://cdn.vox-cdn.com/thumbor/2xj1ySLIz1EZ49NvSsPzq8Itjyg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23084330/bored_ape_nft_accidental_.jpg"
+      user = {userProp} price = "12.4" currency = "ETH" likes={1100} timeLeft = {100000}
+      > </Card> 
       <Step title = "What" number = {3} description = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"></Step>
       <Container className={classNames(styles.container)} maxWidth="xl">
         
