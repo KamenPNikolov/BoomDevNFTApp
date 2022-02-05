@@ -12,6 +12,8 @@ import Trending from "../trending/Trending";
 import Footer from "../footer/Footer";
 import Step from "../how/Step";
 import How from "../how/How";
+import Auctions from "../auctions/Auctions" ;
+
 
 export default function Copyright() {
   const userProp = {avatar: {url: "/images/avatar.png"},verified: true};
@@ -21,28 +23,31 @@ export default function Copyright() {
      mediaUrl:"images/nft.jpg",
      price:1,
      currency:"ETH",
-     
+     timeLeft: 100000
     }
     ,{
       name:"Judie",
       user:{avatar:{url:"images/avatar.png"},verified:true},
       mediaUrl:"images/nft.jpg",
       price:2.3,
-      currency:"ETH" 
-    }
+      currency:"ETH", 
+      timeLeft: 1000000
+      }
     ,{
       name:"Juniper",
       user:{avatar:{url:"images/avatar.png"},verified:true},
       mediaUrl:"images/nft.jpg",
       price:5,
-      currency:"ETH" 
+      currency:"ETH", 
+      timeLeft: 1000000 
     }
     ,{
       name:"Maples",
       user:{avatar:{url:"images/avatar.png"},verified:true},
       mediaUrl:"images/nft.jpg",
       price:10,
-      currency:"ETH" 
+      currency:"ETH", 
+      timeLeft: 1000000 
     }
   ];
   const itemsForHow = [
@@ -66,6 +71,7 @@ export default function Copyright() {
      {/*  <User verified = {true} size = {60} avatar = "/images/avatar.png" name = "kemimaro" info="140 items" ></User> */ }
       <Footer></Footer>
       <Trending cards = {propsForTrending}></Trending>
+      <Auctions cards = {propsForTrending}></Auctions>
       <How items = {itemsForHow}  title = "How it works" description = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
        link = "https://en.wikipedia.org/wiki/Non-fungible_token" ></How>
      <Card name = "Monkey" mediaUrl="https://cdn.vox-cdn.com/thumbor/2xj1ySLIz1EZ49NvSsPzq8Itjyg=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23084330/bored_ape_nft_accidental_.jpg"
