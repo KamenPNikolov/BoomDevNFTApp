@@ -1,0 +1,14 @@
+@use "../../styles/colors";
+
+.container {
+   // padding: 10px; 
+   // display: flex !important;
+   // align-items: center;
+   // justify-content: center;
+    background-color:  colors.$background_paper;
+    width: 100%;
+  
+  }
+  .image{
+      border-radius: 15px;
+  }

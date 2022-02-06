@@ -13,6 +13,7 @@ import Footer from "../footer/Footer";
 import Step from "../how/Step";
 import How from "../how/How";
 import Auctions from "../auctions/Auctions" ;
+import Featured from "../featured/Featured";
 
 
 export default function Copyright() {
@@ -50,6 +51,58 @@ export default function Copyright() {
       timeLeft: 1000000 
     }
   ];
+
+  const itemsForFeatured = [
+    {
+      image:
+        "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=500&h=500",
+      title: "Breakfast",
+      rows: 2,
+      cols: 3,
+      href: "/about",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=500&h=500",
+      title: "Burger",
+      href: "/about",
+
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1522770179533-24471fcdba45?w=500&h=500",
+      title: "Camera",
+      href: "/about",
+
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?w=500&h=500",
+      title: "Coffee",
+      href: "/about",
+
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1533827432537-70133748f5c8?w=500&h=500",
+      title: "Hats",
+      href: "/about",
+
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=500&h=500",
+      title: "Honey",
+      href: "/about",
+
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6?w=500&h=500",
+      title: "Basketball",
+      href: "/about",
+    },
+  ];
   const itemsForHow = [
       {
         title: "Digital Currency",
@@ -70,7 +123,8 @@ export default function Copyright() {
 
      {/*  <User verified = {true} size = {60} avatar = "/images/avatar.png" name = "kemimaro" info="140 items" ></User> */ }
       <Footer></Footer>
-      <Trending cards = {propsForTrending}></Trending>
+     {/* <Trending cards = {propsForTrending}></Trending> */}
+     <Featured items = {itemsForFeatured}></Featured>
       <Auctions cards = {propsForTrending}></Auctions>
       <How items = {itemsForHow}  title = "How it works" description = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
        link = "https://en.wikipedia.org/wiki/Non-fungible_token" ></How>
