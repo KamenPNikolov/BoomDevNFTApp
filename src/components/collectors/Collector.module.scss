@@ -1,0 +1,13 @@
+@use "../../styles/colors";
+
+.container{
+    
+    width: 20%;
+    
+}
+.light{
+    background-color: rgba(colors.$background_paper,30%) 
+}
+.dark{
+    background-color: rgba(colors.$background_paper,60%) 
+}

@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 export default function Featured({items = []}){
     const router = useRouter();
     const ImageArray = [];
-    console.log(items);
+   // console.log(items);
     for (let i=0;i<items.length;i++) {
     ImageArray.push(<ImageListItem  className={classNames(styles.image)} 
      key={items[i].image} cols={items[i].cols || 1} rows={items[i].rows || 1}

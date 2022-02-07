@@ -14,6 +14,7 @@ import Step from "../how/Step";
 import How from "../how/How";
 import Auctions from "../auctions/Auctions" ;
 import Featured from "../featured/Featured";
+import Collector from "../collectors/Collector";
 
 
 export default function Copyright() {
@@ -122,6 +123,8 @@ export default function Copyright() {
     <div className={classNames(styles.wrapper)}>
 
      {/*  <User verified = {true} size = {60} avatar = "/images/avatar.png" name = "kemimaro" info="140 items" ></User> */ }
+      <Collector name ="kemimaro" nftCount={140} verified={true} avatar = "/images/avatar.png" type = {0}></Collector>
+      <Collector name ="kemimaro" nftCount={140} verified={true} avatar = "/images/avatar.png" type = {1}></Collector>
       <Footer></Footer>
      {/* <Trending cards = {propsForTrending}></Trending> */}
      <Featured items = {itemsForFeatured}></Featured>
