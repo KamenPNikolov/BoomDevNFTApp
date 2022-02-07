@@ -15,6 +15,7 @@ import How from "../how/How";
 import Auctions from "../auctions/Auctions" ;
 import Featured from "../featured/Featured";
 import Collector from "../collectors/Collector";
+import CollectorColumn from "../collectors/CollectorColumn";
 
 
 export default function Copyright() {
@@ -119,12 +120,36 @@ export default function Copyright() {
         description: "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
       }
   ];
+  const itemsForCollector = [
+    {
+      name: "first",
+      nftsCount: "23",
+      avatar:  "/images/avatar.png",
+      verified: true,
+      id: 1
+    },
+    {
+      name: "second",
+      nftsCount: "2",
+      avatar:  "/images/avatar.png",
+      verified: true,
+      id: 2
+    },
+    {
+      name: "third",
+      nftsCount: "234",
+      avatar:  "/images/avatar.png",
+      verified: false,
+      id: 3
+    }
+  ]
   return (
     <div className={classNames(styles.wrapper)}>
 
-     {/*  <User verified = {true} size = {60} avatar = "/images/avatar.png" name = "kemimaro" info="140 items" ></User> */ }
+     {/*  <User verified = {true} size = {60} avatar = "/images/avatar.png" name = "kemimaro" info="140 items" ></User> 
       <Collector name ="kemimaro" nftCount={140} verified={true} avatar = "/images/avatar.png" type = {0}></Collector>
-      <Collector name ="kemimaro" nftCount={140} verified={true} avatar = "/images/avatar.png" type = {1}></Collector>
+  <Collector name ="kemimaro" nftCount={140} verified={true} avatar = "/images/avatar.png" type = {1}></Collector> */}
+  <CollectorColumn items={itemsForCollector}></CollectorColumn>
       <Footer></Footer>
      {/* <Trending cards = {propsForTrending}></Trending> */}
      <Featured items = {itemsForFeatured}></Featured>
