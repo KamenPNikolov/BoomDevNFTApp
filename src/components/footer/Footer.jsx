@@ -20,10 +20,8 @@ export default function Footer() {
         <Grid item xs = "5" >
         <p style ={{marginLeft:"30%"}}>BUM All rights reserved</p>
         </Grid>
-        <Grid item xs = "2">
+        <Grid item xs = "4">
         <Button className={classNames(styles.button)} size = "small" variant="text">Privacy Policy</Button>
-        </Grid>
-        <Grid item xs = "2">
         <Button   className={classNames(styles.button)} variant="text" size = "small">Cookie Policy</Button>
         </Grid>
       </Grid>
