@@ -9,7 +9,7 @@ import User from "../user/User";
 
 
 
-export default function Collector({name = "",avatar = "", verified = false,type = 0, nftCount = 0,id = 0}) {
+export default function Collector({name = "",avatar = "", verified = false,type = 0, nftsCount = 0,id = 0}) {
     const darkOrLight = (type==0?styles.dark:styles.light);
     const darkOrLightNumber = (type==0?styles.darknumber:styles.lightnumber);
   return (
@@ -19,7 +19,7 @@ export default function Collector({name = "",avatar = "", verified = false,type 
             <b className={classNames(styles.number)} >{id}</b>
         </Grid>
         <Grid  item xs = "8" >
-        <User  className={classNames(styles.user)} verified = {verified}  avatar = {avatar} name = {name} info={nftCount + " items"} ></User>
+        <User  className={classNames(styles.user)} verified = {verified}  avatar = {avatar} name = {name} info={nftsCount} ></User>
         </Grid>
         </Grid>    
     </div>
