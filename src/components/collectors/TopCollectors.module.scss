@@ -1,0 +1,16 @@
+@use "../../styles/colors";
+
+.select{
+    margin-left: 80%;
+    margin-bottom:5%;
+    width: 20%;
+    background-color: colors.$secondary_main;
+    color: colors.$secondary_main;
+}
+.container {
+    background-color:  rgba(colors.$background_paper,25%)  ;
+
+  }
+  .grid{
+      margin-bottom:10%;
+  }

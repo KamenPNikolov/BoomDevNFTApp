@@ -16,7 +16,7 @@ import Auctions from "../auctions/Auctions" ;
 import Featured from "../featured/Featured";
 import Collector from "../collectors/Collector";
 import CollectorColumn from "../collectors/CollectorColumn";
-
+import TopCollectors from "../collectors/TopCollectors";
 
 export default function Copyright() {
   const userProp = {avatar: {url: "/images/avatar.png"},verified: true};
@@ -126,30 +126,88 @@ export default function Copyright() {
       nftsCount: "23",
       avatar:  "/images/avatar.png",
       verified: true,
-      id: 1
     },
     {
       name: "second",
       nftsCount: "2",
       avatar:  "/images/avatar.png",
       verified: true,
-      id: 2
     },
     {
       name: "third",
       nftsCount: "234",
       avatar:  "/images/avatar.png",
       verified: false,
-      id: 3
+    },
+    {
+      name: "first",
+      nftsCount: "23",
+      avatar:  "/images/avatar.png",
+      verified: true,
+      
+    },
+    {
+      name: "second",
+      nftsCount: "2",
+      avatar:  "/images/avatar.png",
+      verified: true,
+     
+    },
+    {
+      name: "third",
+      nftsCount: "234",
+      avatar:  "/images/avatar.png",
+      verified: false,
+      
+    },
+    {
+      name: "first",
+      nftsCount: "23",
+      avatar:  "/images/avatar.png",
+      verified: true,
+    },
+    {
+      name: "second",
+      nftsCount: "2",
+      avatar:  "/images/avatar.png",
+      verified: true,
+    },
+    {
+      name: "third",
+      nftsCount: "234",
+      avatar:  "/images/avatar.png",
+      verified: false,
+    },
+    {
+      name: "first",
+      nftsCount: "23",
+      avatar:  "/images/avatar.png",
+      verified: true,
+      
+    },
+    {
+      name: "second",
+      nftsCount: "2",
+      avatar:  "/images/avatar.png",
+      verified: true,
+     
+    },
+    {
+      name: "third",
+      nftsCount: "234",
+      avatar:  "/images/avatar.png",
+      verified: false,
+      
     }
-  ]
+  ];
   return (
     <div className={classNames(styles.wrapper)}>
 
      {/*  <User verified = {true} size = {60} avatar = "/images/avatar.png" name = "kemimaro" info="140 items" ></User> 
       <Collector name ="kemimaro" nftCount={140} verified={true} avatar = "/images/avatar.png" type = {0}></Collector>
-  <Collector name ="kemimaro" nftCount={140} verified={true} avatar = "/images/avatar.png" type = {1}></Collector> */}
-  <CollectorColumn items={itemsForCollector}></CollectorColumn>
+  <Collector name ="kemimaro" nftCount={140} verified={true} avatar = "/images/avatar.png" type = {1}></Collector> 
+  <CollectorColumn items={itemsForCollector}></CollectorColumn>*/}
+  <TopCollectors collectors = {itemsForCollector}></TopCollectors>
       <Footer></Footer>
      {/* <Trending cards = {propsForTrending}></Trending> */}
      <Featured items = {itemsForFeatured}></Featured>
