@@ -14,7 +14,7 @@ export default function Auctions({cards = []}){
 
     return (
         <div className={classNames(styles.wrapper)}>
-    <Container className={classNames(styles.container)} maxWidth="xl">
+    <Container className={classNames(styles.container)} maxWidth="lg">
     <h1 className={classNames(styles.heading)}><LocalFireDepartmentIcon></LocalFireDepartmentIcon> Live Auctions</h1>
     <Select className={classNames(styles.select)} defaultValue = {7}  label="Time" >
     <MenuItem value={0}>Today </MenuItem>

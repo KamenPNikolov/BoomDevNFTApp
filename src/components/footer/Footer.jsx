@@ -12,7 +12,7 @@ export default function Footer() {
 
     return (
     <div className={classNames(styles.wrapper)}>
-      <Container className={classNames(styles.container)}>
+      <Container className={classNames(styles.container)}  maxWidth = 'xl'>
       <Grid container  direction="row" justifyContent="space-evenly" alignItems="center">
         <Grid item xs="2">
         <Logo type = "muted"></Logo>

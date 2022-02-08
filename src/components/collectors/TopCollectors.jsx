@@ -18,7 +18,7 @@ export default function TopCollectors({collectors = []}){
     console.log(chunks);
     return (
 
-    <Container className={classNames(styles.container)} maxWidth="xl">
+    <Container className={classNames(styles.container)} maxWidth="lg">
         <h1 className={classNames(styles.heading)}>Top Collectors</h1>
         <Select className={classNames(styles.select)} defaultValue = {7}  label="Time" >
             <MenuItem value={0}>Today </MenuItem>

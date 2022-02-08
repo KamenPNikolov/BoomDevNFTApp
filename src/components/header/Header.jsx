@@ -14,7 +14,7 @@ export default function Header() {
 
     return (
     <div className={classNames(styles.wrapper)}>
-      <Container className={classNames(styles.container)}>
+      <Container className={classNames(styles.container)} maxWidth = 'xl'>
       <Grid container spacing={10}>
         <Grid item xs="auto">
         <Logo></Logo>
