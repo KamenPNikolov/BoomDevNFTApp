@@ -9,7 +9,7 @@ export default function ProductInfoPrice({amount=0,currency=""}) {
     return (
       
       <div className={classNames(styles["product-info-price"])}>
-          <Typography className={classNames(styles.title)} variant="h3" gutterBottom component="div">{"ON SALE FOR "+amount+ " "+currency}</Typography>
+          <Typography className={classNames(styles.title)} variant="subtitle1" gutterBottom component="div">{"ON SALE FOR "+amount+ " "+currency}</Typography>
       </div>
       
     );
