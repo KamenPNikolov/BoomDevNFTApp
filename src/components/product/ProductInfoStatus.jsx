@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classNames from "classnames";
 import Grid from "@mui/material/Grid";
-import styles from "./ProductInfoPrice.module.scss";
+import styles from "./ProductInfoStatus.module.scss";
 import  Typography  from '@mui/material/Typography';
 import { Chip } from '@mui/material';
 import Circle from '@mui/icons-material/Circle';
