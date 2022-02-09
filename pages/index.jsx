@@ -1,5 +1,5 @@
 import Example from "../src/components/example/Example";
-
+import * as React from 'react';
 import Header from "../src/components/header/Header";
 import Avatar from "../src/components/avatar/Avatar";
 import User from "../src/components/user/User";
@@ -13,10 +13,22 @@ import Featured from "../src/components/featured/Featured";
 import Collector from "../src/components/collectors/Collector";
 import CollectorColumn from "../src/components/collectors/CollectorColumn";
 import TopCollectors from "../src/components/collectors/TopCollectors";
-
+import dataActivity from "../data/activity.json";
+import dataFeatured from "../data/featured.json";
+import dataTrending from "../data/trending.json";
+import dataUsers from "../data/users.json";
+import dataNfts from "../data/nfts.json";
 export default function Index() {
   //return <Example />;
-  const userProp = {avatar: {url: "/images/avatar.png"},verified: true};
+  const [featuredCards, setFeaturedCards] = React.useState([]);
+  const [trendingCards, setTrendingCards] = React.useState([]);
+  const [nftCards,setNftCards] = React.useState([]);
+React.useEffect(() => {
+    setFeaturedCards(dataFeatured);
+    setTrendingCards(dataTrending);
+    setNftCards(dataNfts);
+}, []);
+  
   const propsForTrending = [
      {name:"Ivy",
      user:{avatar:{url:"images/avatar.png"},verified:true},
@@ -200,12 +212,12 @@ export default function Index() {
   return <div style={{width:"100%"}}>
     <Header></Header>
     
-    <Featured items = {itemsForFeatured}></Featured>  
+    <Featured items = {featuredCards}></Featured>  
      <Trending cards = {propsForTrending}></Trending>
     <TopCollectors collectors = {itemsForCollector}></TopCollectors>
     <How items = {itemsForHow}  title = "How it works" description = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
        link = "https://en.wikipedia.org/wiki/Non-fungible_token" ></How>
-    <Auctions cards = {propsForTrending}></Auctions>
+    <Auctions cards = {nftCards}></Auctions>
     <Footer></Footer>
     
 
