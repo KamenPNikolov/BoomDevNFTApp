@@ -13,7 +13,7 @@ import Featured from "../src/components/featured/Featured";
 import Collector from "../src/components/collectors/Collector";
 import CollectorColumn from "../src/components/collectors/CollectorColumn";
 import TopCollectors from "../src/components/collectors/TopCollectors";
-import ProductImage from "../src/product/ProductImage";
+import ProductImage from "../src/components/product/ProductImage";
 import dataActivity from "../data/activity.json";
 import dataFeatured from "../data/featured.json";
 import dataTrending from "../data/trending.json";
