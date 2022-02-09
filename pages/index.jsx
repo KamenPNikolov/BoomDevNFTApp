@@ -13,7 +13,7 @@ import Featured from "../src/components/featured/Featured";
 import Collector from "../src/components/collectors/Collector";
 import CollectorColumn from "../src/components/collectors/CollectorColumn";
 import TopCollectors from "../src/components/collectors/TopCollectors";
-import ProductImage from "../src/components/productimage/ProductImage";
+import ProductImage from "../src/product/ProductImage";
 import dataActivity from "../data/activity.json";
 import dataFeatured from "../data/featured.json";
 import dataTrending from "../data/trending.json";
@@ -219,7 +219,7 @@ React.useEffect(() => {
     <How items = {itemsForHow}  title = "How it works" description = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
        link = "https://en.wikipedia.org/wiki/Non-fungible_token" ></How>
     <Auctions cards = {propsForTrending}></Auctions>
-<ProductImage url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"></ProductImage>
+   <ProductImage url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"></ProductImage>
     <Footer></Footer>
     
 
