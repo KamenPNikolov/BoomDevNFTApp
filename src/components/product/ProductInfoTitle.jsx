@@ -4,12 +4,12 @@ import Grid from "@mui/material/Grid";
 import styles from "./ProductInfoTitle.module.scss";
 import  Typography  from '@mui/material/Typography';
 
-export default function ProductImage({text=""}) {
+export default function ProductInfoTitle({text=""}) {
 
     return (
       
       <div className={classNames(styles["product-info-title"])}>
-          <Typography className={classNames(styles.title)} variant="h1" gutterBottom component="div">{text}</Typography>
+          <Typography className={classNames(styles.title)} variant="h1" gutterBottom component="div"><h1>{text}</h1></Typography>
       </div>
       
     );
