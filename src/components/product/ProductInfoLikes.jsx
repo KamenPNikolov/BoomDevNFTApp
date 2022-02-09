@@ -7,7 +7,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Chip } from '@mui/material';
 
 
-export default function ProductInfoStatus({amount=0}) {
+export default function ProductInfoLikes({amount=0}) {
 
     return (
       
