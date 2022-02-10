@@ -1,0 +1,20 @@
+@use "../../styles/colors";
+
+.product-info-creator{
+    font-weight: bold;
+    border-radius: 30px;
+    min-height:100px;
+    max-width: 300px;
+}
+.title{
+    font-weight: bold;
+    font: 20px Arial, sans-serif;
+    background-color:rgba(colors.$background_default,0.5);
+    height:20%;
+    color: colors.$text_secondary;
+
+}
+.user-container{
+    background-color: rgba(colors.$background_default,0.9 );
+    min-height: 100px;
+}

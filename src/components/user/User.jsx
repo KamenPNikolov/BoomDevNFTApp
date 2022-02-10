@@ -13,7 +13,7 @@ export default function User({name = "", info = "",avatar = "",size = 55, verifi
        <Avatar className={classNames(styles.avatar)} verified = {verified} size = {size} url = {avatar}></Avatar>
        <div className={classNames(styles.innerGrid)}>
         <div className={classNames(styles.name)}>{name}</div>
-        <div className={classNames(styles.info)}>{info + " items"}</div>
+        <div className={classNames(styles.info)}>{info + (info?" items":"")}</div>
         </div>
     </div>      
     );

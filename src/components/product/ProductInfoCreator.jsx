@@ -7,14 +7,15 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Chip } from '@mui/material';
 import * as myModule from "@mui/material";
 import CardHeader from '@mui/material/CardHeader';
+import User from '../user/User';
 
 export default function ProductInfoCreator({name="",avatar="",verified=false}) {
 
     return (
       
-        <myModule.Card sx={{ maxWidth: 100 }} className={classNames(styles.card)}>
-           <CardHeader  title = "Creator"/> 
-           <CardContent></CardContent>
+        <myModule.Card className={classNames(styles["product-info-creator"])}>
+        <CardHeader title = "Creator" className={classNames(styles["title"])}/>
+        <div className={classNames(styles["user-container"])}><User name={name} avatar={avatar} verified = {verified}></User></div>
         </myModule.Card>
       
     );
