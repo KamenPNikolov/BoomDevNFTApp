@@ -1,5 +1,6 @@
 @use "../../styles/colors";
 
+
 .product-info-creator{
     font-weight: bold;
     border-radius: 30px;
@@ -17,7 +18,4 @@
 .user-container{
     background-color: rgba(colors.$background_default,0.9 );
     min-height: 100px;
-}
-.text{
-    margin-left:15%;
 }

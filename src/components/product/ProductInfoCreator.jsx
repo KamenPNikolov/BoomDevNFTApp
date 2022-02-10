@@ -8,13 +8,16 @@ import { Chip } from '@mui/material';
 import * as myModule from "@mui/material";
 import CardHeader from '@mui/material/CardHeader';
 import User from '../user/User';
+import  Typography  from '@mui/material/Typography';
+
 
 export default function ProductInfoCreator({name="",avatar="",verified=false}) {
 
     return (
       
         <myModule.Card className={classNames(styles["product-info-creator"])}>
-        <CardHeader title = "Creator" className={classNames(styles["title"])}/>
+         <Typography className={classNames(styles.title)}  component="div"><b className={classNames(styles.text)} >Creator</b></Typography>
+       
         <div className={classNames(styles["user-container"])}><User name={name} avatar={avatar} verified = {verified}></User></div>
         </myModule.Card>
       
