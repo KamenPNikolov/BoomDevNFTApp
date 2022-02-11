@@ -1,6 +1,10 @@
 @use "../../styles/colors";
-
 .product-info-creator{
+    margin-left: 5%;
+    max-width:300px;
+}
+
+.product-info-creator-card{
     font-weight: bold;
     border-radius: 30px;
     min-height:100px;
@@ -9,13 +13,13 @@
 .title{
     font-weight: bold;
     font: 20px Arial, sans-serif;
-    background-color:rgba(colors.$background_default,0.5);
+    background-color:rgba(colors.$background_paper,0.5);
     height:20%;
     color: colors.$text_secondary;
 
 }
 .user-container{
-    background-color: rgba(colors.$background_default,0.9 );
+    background-color: rgba(colors.$background_default,0.70);
     min-height: 100px;
 }
 .text{

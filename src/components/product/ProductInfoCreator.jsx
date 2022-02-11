@@ -14,12 +14,13 @@ import  Typography  from '@mui/material/Typography';
 export default function ProductInfoCreator({name="",avatar="",verified=false}) {
 
     return (
-      
-        <myModule.Card className={classNames(styles["product-info-creator"])}>
-         <Typography className={classNames(styles.title)}  component="div"><b className={classNames(styles.text)} >Creator</b></Typography>
+      <div className={classNames(styles["product-info-creator"])}>
+        <myModule.Card className={classNames(styles["product-info-creator-card"])} >
+         <Typography className={classNames(styles.title)} component="div">Creator</Typography>
        
         <div className={classNames(styles["user-container"])}><User name={name} avatar={avatar} verified = {verified}></User></div>
         </myModule.Card>
+    </div>
       
     );
   }
