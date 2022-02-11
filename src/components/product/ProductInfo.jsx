@@ -10,7 +10,7 @@ import CardHeader from '@mui/material/CardHeader';
 import User from '../user/User';
 import  Typography  from '@mui/material/Typography';
 
-export default function ProductInfo({name="",avatar="",verified=false}) {
+export default function ProductInfo({title="",creator={name: "",avatar: "", verified: false},price = 0, curency = "", likes = 0, onTimeEnd, timeEnd = Date.now(), isLive =false }) {
 
     return (
       <div className={classNames(styles["product-info"])}>
