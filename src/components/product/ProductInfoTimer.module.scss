@@ -1,21 +1,34 @@
 @use "../../styles/colors";
 
-
-.product-info-creator{
+.product-info-timer{
+    min-height:100px;
+    max-width: 300px;
+     
+}
+.product-info-timer-card{
     font-weight: bold;
     border-radius: 30px;
     min-height:100px;
     max-width: 300px;
+
 }
 .title{
     font-weight: bold;
-    font: 20px Arial, sans-serif;
-    background-color:rgba(colors.$background_default,0.5);
+    font-size: 30px;
+    background-color:rgba(colors.$secondary_main,0.7);
     height:20%;
-    color: colors.$text_secondary;
+    color: black;
+    text-align: center;
 
 }
-.user-container{
-    background-color: rgba(colors.$background_default,0.9 );
+.timer{
+    background-color: rgba(colors.$secondary_main,0.9 );
     min-height: 100px;
+    
+}
+.count{
+    text-align: center;
+    font-size: 38px;
+    color: colors.$background_default;
+    font-weight: bold;
 }

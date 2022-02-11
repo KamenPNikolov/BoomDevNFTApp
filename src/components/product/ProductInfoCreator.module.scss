@@ -13,15 +13,14 @@
 .title{
     font-weight: bold;
     font: 20px Arial, sans-serif;
-    background-color:rgba(colors.$background_paper,0.5);
+    background-color:rgba(colors.$primary_main,0.25);
     height:20%;
     color: colors.$text_secondary;
+    text-align: center;
 
 }
 .user-container{
-    background-color: rgba(colors.$background_default,0.70);
+    background-color: rgba(colors.$primary_main,0.1);
     min-height: 100px;
 }
-.text{
-    margin-left:15%;
-}
+

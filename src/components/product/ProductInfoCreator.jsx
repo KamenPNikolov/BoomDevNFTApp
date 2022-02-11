@@ -18,7 +18,7 @@ export default function ProductInfoCreator({name="",avatar="",verified=false}) {
         <myModule.Card className={classNames(styles["product-info-creator-card"])} >
          <Typography className={classNames(styles.title)} component="div">Creator</Typography>
        
-        <div className={classNames(styles["user-container"])}><User name={name} avatar={avatar} verified = {verified}></User></div>
+        <div className={classNames(styles["user-container"])}><User  name={name} avatar={avatar} verified = {verified}></User></div>
         </myModule.Card>
     </div>
       
