@@ -22,7 +22,7 @@ import  Container  from '@mui/material/Container';
 export default function ProductInfo({title="",creator={name: "",avatar: "", verified: false},price = 0, currency = "", likes = 0, onTimeEnd, timeEnd = Date.now(), isLive =false }) {
 
     return (
-      <Container className={classNames(styles["product-info"])}  maxWidth="sm">
+      <div className={classNames(styles["product-info"])}  maxWidth="sm">
         <ProductInfoTitle   text={title} className={classNames(styles["title"])}></ProductInfoTitle>
         <Stack className={classNames(styles["stats"])}
                 
@@ -48,7 +48,7 @@ export default function ProductInfo({title="",creator={name: "",avatar: "", veri
                 <ProductInfoTimer onTimeEnd={onTimeEnd} timeEnd={timeEnd}></ProductInfoTimer>
                 </Grid>
         </Grid> 
-    </Container>
+    </div>
       
     );
   }
