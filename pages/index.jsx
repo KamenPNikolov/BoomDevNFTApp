@@ -23,6 +23,7 @@ import ProductInfoStatus from "../src/components/product/ProductInfoStatus";
 import ProductInfoLikes from "../src/components/product/ProductInfoLikes";
 import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
 import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
+import ProductInfo from "../src/components/product/ProductInfo";
 export default function Index() {
   //return <Example />;
   const [featuredCards, setFeaturedCards] = React.useState([]);
@@ -227,9 +228,11 @@ React.useEffect(() => {
    <ProductImage url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"></ProductImage>
    <ProductInfoStatus></ProductInfoStatus>
    <ProductInfoCreator  verified = {true} avatar = "/images/avatar.png" name = "kemimaro"></ProductInfoCreator>
-   <ProductInfoTimer timeEnd={Date.now()+100000}></ProductInfoTimer>
+   <ProductInfoTimer timeEnd={Date.now()+10000000}></ProductInfoTimer>
    <ProductInfoTimer ></ProductInfoTimer>
    <ProductInfoLikes amount = {114050}></ProductInfoLikes>
+
+   <ProductInfo title="Sample NFT" creator = { {verified:true, avatar: "/images/avatar.png", name : "kemimaro"}} price = {12} currency = "ETH" likes = {1011000} timeEnd={Date.now()+10000000} isLive={true}></ProductInfo>
     
 
     <Footer></Footer>
