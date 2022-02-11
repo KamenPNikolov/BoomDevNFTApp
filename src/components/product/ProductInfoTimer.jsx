@@ -24,7 +24,7 @@ export default function ProductInfoTimer({onTimeEnd,timeEnd}) {
         <myModule.Card className={classNames(styles["product-info-timer-card"])}>
          <Typography className={classNames(styles.title)}  component="div">Ends in</Typography>
        
-        <div className={classNames(styles["timer"])}>{countDownPaper}</div>
+        <div className={classNames([styles["timer"],styles["active"]])}>{countDownPaper}</div>
         </myModule.Card>:""}
         </div>
       
