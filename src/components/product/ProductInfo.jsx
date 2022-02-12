@@ -19,22 +19,23 @@ import ProductInfoTimer from './ProductInfoTimer';
 import  Container  from '@mui/material/Container';
 
 
-export default function ProductInfo({title="",creator={name: "",avatar: "", verified: false},price = 0, currency = "", likes = 0, onTimeEnd, timeEnd = Date.now(), isLive =false }) {
+export default function ProductInfo({title="",creator={name: "",avatar: "", verified: false},price = 0, currency = "", likes = 0, onTimeEnd, timeEnd, isLive =false }) {
 
     return (
-      <div className={classNames(styles["product-info"])}  maxWidth="sm">
+      <div className={classNames(styles["product-info"])} >
         <ProductInfoTitle   text={title} className={classNames(styles["title"])}></ProductInfoTitle>
         <Stack className={classNames(styles["stats"])}
-                
+                borderTop={1}
+                borderColor={"primary.main"}
                 direction="row"
                 justifyContent="space-between"
-                alignItems="stretch"
+                alignItems="flex-end"
                 spacing={2}
             >
                 
-               <ProductInfoPrice amount={price} currency={currency} ></ProductInfoPrice>
+               <ProductInfoPrice amount={price} currency={currency}  ></ProductInfoPrice>
                
-              <Stack direction="row"> {isLive?<ProductInfoStatus></ProductInfoStatus>:""}
+              <Stack direction="row" spacing={1}> {isLive?<ProductInfoStatus></ProductInfoStatus>:""}
                 <ProductInfoLikes amount={likes}></ProductInfoLikes> 
               </Stack>
                 

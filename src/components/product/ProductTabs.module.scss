@@ -1,0 +1,6 @@
+@use "../../styles/colors";
+
+.product-tabs{
+   background-color: colors.$background_default;  
+   max-width: 600px;
+}
