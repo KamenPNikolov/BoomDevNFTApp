@@ -35,8 +35,8 @@ export default function ProductTabs({text="", bids=[]}){
           <TabContext value={value}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
               <TabList onChange={handleChange} >
-                 <Tab label="Details" value="1" />
-                  <Tab label="Bids" value="2" />
+                 <Tab label="Details" className={classNames(styles["tab-details"])} value="1" />
+                  <Tab label="Bids" value="2" className={classNames(styles["tab-bids"])} />
                 </TabList>
             </Box>
           <TabPanel value="1"  className={classNames(styles["tab-details"])}><p>{text}</p></TabPanel>
