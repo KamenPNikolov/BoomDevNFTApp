@@ -4,3 +4,18 @@
    background-color: colors.$background_default;  
    max-width: 600px;
 }
+.light{
+   background-color: rgba(colors.$background_paper,20%); 
+}
+.dark{
+   background-color: rgba(colors.$background_paper,75%) ;
+}
+.amount{
+   color: colors.$secondary_main;
+}
+.tab-bids{
+  margin-left: 0%;
+}
+.tab-details{
+   margin-left: 0%;
+}

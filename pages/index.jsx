@@ -24,6 +24,7 @@ import ProductInfoLikes from "../src/components/product/ProductInfoLikes";
 import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
 import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
 import ProductInfo from "../src/components/product/ProductInfo";
+import ProductTabs from "../src/components/product/ProductTabs";
 export default function Index() {
   //return <Example />;
   const [featuredCards, setFeaturedCards] = React.useState([]);
@@ -216,6 +217,37 @@ React.useEffect(() => {
       
     }
   ];
+
+ const itemsForBids=[
+    {
+      user:{
+        avatar: "/images/avatar.png",
+        name: "kemimaro1",
+        verified: true
+      },
+      amount: 3,
+      date: "2019-09-25T14:34:32.999Z"
+    },
+    {
+      user:{
+        avatar: "/images/avatar.png",
+        name: "kemimaro2",
+        verified: false
+      },
+      amount: 2,
+      date: "2020-09-25T14:34:32.999Z"
+    },
+    {
+      user:{
+        avatar: "/images/avatar.png",
+        name: "kemimaro3",
+        verified: true
+      },
+      amount: 1,
+      date: "2019-09-25T14:34:32.999Z"
+    }
+  ];
+
   return <div style={{width:"100%"}}>
     <Header></Header>
     
@@ -233,7 +265,9 @@ React.useEffect(() => {
    <ProductInfoLikes amount = {114050}></ProductInfoLikes>
 
    <ProductInfo title="Sample NFT" creator = { {verified:true, avatar: "/images/avatar.png", name : "kemimaro"}} price = {12} currency = "ETH" likes = {1011000} timeEnd={Date.now()+10000000} isLive={true}></ProductInfo>
-    
+    <ProductTabs text = {"What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"}
+    bids={itemsForBids}>
+    </ProductTabs>
 
     <Footer></Footer>
     

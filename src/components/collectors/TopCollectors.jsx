@@ -12,10 +12,10 @@ export default function TopCollectors({collectors = []}){
     const mapped = collectors.map(({name,nftsCount,avatar,verified},index) => {
         let id = index+1;
         return {name,nftsCount,avatar,verified,id}});
-    console.log(mapped);
-    console.log("*****");
+   // console.log(mapped);
+   // console.log("*****");
     const chunks = _.chunk(mapped,3);
-    console.log(chunks);
+    //console.log(chunks);
     return (
 
     <Container className={classNames(styles.container)} maxWidth="lg">
