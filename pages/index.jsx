@@ -26,6 +26,7 @@ import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
 import ProductInfo from "../src/components/product/ProductInfo";
 import ProductTabs from "../src/components/product/ProductTabs";
 import ProductActions from "../src/components/product/ProductActions";
+import ProductContainer from "../src/components/product/ProductContainer";
 export default function Index() {
   //return <Example />;
   const [featuredCards, setFeaturedCards] = React.useState([]);
@@ -270,6 +271,12 @@ React.useEffect(() => {
     bids={itemsForBids}>
     </ProductTabs>
     <ProductActions isLive={false} currency="ETH" buyAmount={10} bidAmount = {5} ></ProductActions>
+    <ProductContainer name ="Sample NFT"  source={{url:"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"}} owner={{username:"kemimaro",verified:true,avatar:{url:"/images/avatar.png"}}} price = {12} currency = "ETH" likes = {1011000} auction_end={"2022-09-25T14:34:32.999Z"} 
+    details = {"What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"}
+    bids={itemsForBids}
+    ></ProductContainer>
+
+
     <Footer></Footer>
     
 
