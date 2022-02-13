@@ -17,10 +17,10 @@ export default function ProductActions({isLive = false, currency = "", buyAmount
     <div className={classNames(styles["product-actions"])} >
     <Grid container  direction="row" justifyContent="space-between"  alignItems="stretch" spacing={1}>
     <Grid item xs="7"  >
-    <Button className={classNames(styles["button"])} disabled={!isLive} variant="contained" >{"BUY FOR " + buyAmount+ " "+ currency}</Button>
+    <Button className={classNames(styles["button"])} onClick = {onBuy} disabled={!isLive?true:false} variant="contained" >{"BUY FOR " + buyAmount+ " "+ currency}</Button>
     </Grid>
    <Grid  item xs = "5" >
-   <Button className={classNames(styles["button"])} disabled={!isLive} variant="outlined" color='secondary' >{"PLACE BID FOR "+ bidAmount+ " "+currency}</Button>
+   <Button className={classNames(styles["button"])} onClick={onBid} disabled={!isLive?true:false} variant='outlined' color='success' >{"PLACE BID FOR "+ bidAmount+ " "+currency}</Button>
    </Grid>
    </Grid>
    </div>

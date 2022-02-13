@@ -3,6 +3,7 @@
 .product-tabs{
    background-color: colors.$background_default;  
    max-width: 600px;
+   min-height: 600px;
 }
 .light{
    background-color: rgba(colors.$background_paper,20%); 

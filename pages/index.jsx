@@ -269,7 +269,7 @@ React.useEffect(() => {
     <ProductTabs text = {"What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"}
     bids={itemsForBids}>
     </ProductTabs>
-    <ProductActions isLive={true} currency="ETH" buyAmount={10} bidAmount = {5} ></ProductActions>
+    <ProductActions isLive={false} currency="ETH" buyAmount={10} bidAmount = {5} ></ProductActions>
     <Footer></Footer>
     
 
