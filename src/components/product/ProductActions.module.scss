@@ -1,0 +1,13 @@
+@use "../../styles/colors";
+
+.button{
+    border-radius: 15px;
+    width:100%;
+}
+.product-actions{
+    background-color: colors.$background_default;  
+    width: 600px;
+}
+.green{
+    color: colors.$secondary_main;
+}

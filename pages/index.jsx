@@ -25,6 +25,7 @@ import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
 import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
 import ProductInfo from "../src/components/product/ProductInfo";
 import ProductTabs from "../src/components/product/ProductTabs";
+import ProductActions from "../src/components/product/ProductActions";
 export default function Index() {
   //return <Example />;
   const [featuredCards, setFeaturedCards] = React.useState([]);
@@ -268,7 +269,7 @@ React.useEffect(() => {
     <ProductTabs text = {"What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"}
     bids={itemsForBids}>
     </ProductTabs>
-
+    <ProductActions isLive={true} currency="ETH" buyAmount={10} bidAmount = {5} ></ProductActions>
     <Footer></Footer>
     
 
