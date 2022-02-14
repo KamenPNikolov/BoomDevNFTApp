@@ -5,18 +5,20 @@ import Footer from "../../../src/components/footer/Footer";
 import dataNfts from "../../../data/nfts.json";
 import * as React from 'react';
 
-export default function ProductPage() {
+export default function Product() {
     const [nfts, setNfts] = React.useState([]);
     React.useEffect(() => {
        
         setNfts(dataNfts);
     }, [dataNfts]);
-
+    
+    
     const router = useRouter();
-    const { id } = router.query;
-    const nft = nfts.find(x => x.id==361);
     console.log(router.query);
-    console.log(nft);
+   // console.log(dataNfts);
+    const { id } = router.query;
+    const nft = dataNfts.find(x => x.id==(parseInt(id)));
+    //console.log(nft);
     const itemsForBids=[
         {
           user:{

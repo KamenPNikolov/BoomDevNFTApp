@@ -24,7 +24,7 @@ export default function ProductContainer({name = "", owner = {username:"",verifi
         <ProductImage url={source.url}></ProductImage>
         </Grid>
        <Grid  item xs = "5" >
-       <ProductInfo onTimeEnd={()=>{}} title= {name} creator = {{name: owner.username, verified: owner.verified, avatar: owner.avatar.url}} price={price} currency = {currency} likes={likes} timeEnd={parseISO(auction_end)} isLive={true} ></ProductInfo>
+       <ProductInfo onTimeEnd={()=>{}} title= {name} creator = {{name: owner.username, verified: owner.verified, avatar: owner.avatar.url}} price={price} currency = {currency} likes={likes} timeEnd={parseISO(auction_end)} isLive={parseISO(auction_end)>Date.now()} ></ProductInfo>
        <ProductTabs text={details} bids={bids}></ProductTabs>
        <ProductActions onBid={()=>{}} onBuy={()=>{}} isLive={true}  currency={currency} buyAmount={price} bidAmount={5}></ProductActions>
        </Grid>
