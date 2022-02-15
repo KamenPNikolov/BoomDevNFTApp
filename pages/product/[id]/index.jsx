@@ -4,6 +4,7 @@ import Header from "../../../src/components/header/Header";
 import Footer from "../../../src/components/footer/Footer";
 import dataNfts from "../../../data/nfts.json";
 import * as React from 'react';
+import Container from "@mui/material/Container";
 
 export default function Product() {
     const [nfts, setNfts] = React.useState([]);
@@ -50,12 +51,13 @@ export default function Product() {
       ];
 
     return (
-    <div style={{width:"100%"}}>
+        <div style={{width:"100%"}}>   
     <Header></Header>
     <ProductContainer name={nft.name} source={nft.source} owner={nft.owner} price = {nft.price} currency = {nft.currency} likes = {nft.likes} auction_end={nft.auction_end} 
     details = {nft.details}
     bids={nft.bids}
     ></ProductContainer>
     <Footer></Footer>
-     </div>);
+    </div>
+    );
 }
