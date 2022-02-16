@@ -1,0 +1,11 @@
+@use "../../styles/colors";
+
+.hero{
+    width:100%;
+    background-color: colors.$primary_main;
+    font-weight: bold;
+    min-height:300px;
+}
+.text{
+    margin-left:5%;
+}
