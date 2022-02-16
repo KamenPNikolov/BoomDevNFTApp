@@ -6,12 +6,14 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Step from "../how/Step";
 import styles from "./How.module.scss";
+import { useRouter } from 'next/router';
 
 export default function How({description="",title="",items=[],link=""}) {
     const steps = [];
     for (let i=0;i<items.length;i++) {
         steps.push(<Grid item> <Step number = {i+1} title = {items[i].title}  description = {items[i].description} ></Step></Grid> );
       }
+      const router = useRouter();
     return (
       
       <Container className={classNames(styles.container)} maxWidth="xl" >
@@ -19,7 +21,7 @@ export default function How({description="",title="",items=[],link=""}) {
           <Grid item xs="5">
               <h1 className={classNames(styles.heading)} ><b>{title}</b></h1>
               <p >{description}</p>
-            <Button size = "small"  variant="contained" color = "secondary" href = {link}>Learn More</Button>
+            <Button size = "small"  variant="contained" color = "secondary" onClick={() => router.push(link)} >Learn More</Button>
           </Grid>
           <Grid  item container direction = "column" xs = "7" spacing = {3}  >
           {steps}

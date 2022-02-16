@@ -259,7 +259,7 @@ React.useEffect(() => {
      <Trending cards = {propsForTrending}></Trending>
     <TopCollectors collectors = {itemsForCollector}></TopCollectors>
     <How items = {itemsForHow}  title = "How it works" description = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
-       link = "https://en.wikipedia.org/wiki/Non-fungible_token" ></How>
+       link = "how" ></How>
     <Auctions cards = {propsForTrending}></Auctions>
    <ProductImage url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"></ProductImage>
    <ProductInfoStatus></ProductInfoStatus>
