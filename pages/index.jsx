@@ -29,6 +29,8 @@ import ProductActions from "../src/components/product/ProductActions";
 import ProductContainer from "../src/components/product/ProductContainer";
 import Hero from "../src/components/hero/Hero";
 import Description from "../src/components/description/Description";
+import ProfileHero from "../src/components/profile/ProfileHero";
+
 export default function Index() {
   //return <Example />;
   const [featuredCards, setFeaturedCards] = React.useState([]);
@@ -281,7 +283,11 @@ React.useEffect(() => {
     <Description text = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
     image = "https://upload.wikimedia.org/wikipedia/commons/7/71/Small_pie.svg"
     ></Description>
+
+    <ProfileHero image = "https://image.shutterstock.com/image-illustration/abstract-plexus-structure-many-glowing-260nw-1203459940.jpg"></ProfileHero>
     <Footer></Footer>
+
+
     
 
   </div>;
