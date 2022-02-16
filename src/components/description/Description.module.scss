@@ -1,0 +1,17 @@
+@use "../../styles/colors";
+
+.description{
+    width:60%;
+    background-color: colors.$background_paper;
+}
+.text{
+    padding-left: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-right:10%;
+}
+.image{
+    padding-left: 10%;
+    padding-bottom: 10%;
+    padding-right:10%;
+}

@@ -28,6 +28,7 @@ import ProductTabs from "../src/components/product/ProductTabs";
 import ProductActions from "../src/components/product/ProductActions";
 import ProductContainer from "../src/components/product/ProductContainer";
 import Hero from "../src/components/hero/Hero";
+import Description from "../src/components/description/Description";
 export default function Index() {
   //return <Example />;
   const [featuredCards, setFeaturedCards] = React.useState([]);
@@ -277,7 +278,9 @@ React.useEffect(() => {
     bids={itemsForBids}
     ></ProductContainer>
     <Hero text = "HOW IT WORKS"></Hero>
-
+    <Description text = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
+    image = "https://upload.wikimedia.org/wikipedia/commons/7/71/Small_pie.svg"
+    ></Description>
     <Footer></Footer>
     
 
