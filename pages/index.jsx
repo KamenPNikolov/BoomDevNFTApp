@@ -31,6 +31,7 @@ import Hero from "../src/components/hero/Hero";
 import Description from "../src/components/description/Description";
 import ProfileHero from "../src/components/profile/ProfileHero";
 import ProfileUser from "../src/components/profile/ProfileUser";
+import ProfileCollectionFilters from "../src/components/profile/ProfileCollectionFilters";
 
 export default function Index() {
   //return <Example />;
@@ -254,6 +255,25 @@ React.useEffect(() => {
       date: "2019-09-25T14:34:32.999Z"
     }
   ];
+const itemsForCollectionFilter = 
+  {
+    sort: [
+      { label: "Name (Ascending)", value: 1 },
+      { label: "Name (Descending)", value: 2 },
+    ],
+    price: [
+      { label: "0.3 - 0.5 ETH", value: 3 },
+      {
+        label: "0.5 - 2 ETH",
+        value: 4,
+      },
+      {
+        label: "2- 3 ETH",
+        value: 5,
+      },
+    ],
+    };
+
 
   return <div style={{width:"100%"}}>
     <Header></Header>
@@ -287,6 +307,8 @@ React.useEffect(() => {
 
     <ProfileHero image = "https://image.shutterstock.com/image-illustration/abstract-plexus-structure-many-glowing-260nw-1203459940.jpg"></ProfileHero>
     <ProfileUser verified={true} avatar = "/images/avatar.png" name="kemimaro3"  info="What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"></ProfileUser>
+
+    <ProfileCollectionFilters filters ={itemsForCollectionFilter} ></ProfileCollectionFilters>
     <Footer></Footer>
 
 
