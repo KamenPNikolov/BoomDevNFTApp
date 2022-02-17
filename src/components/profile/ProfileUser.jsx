@@ -9,8 +9,9 @@ export default function ProfileUser({name="", info="", avatar = "", verified = f
 
     return (
                 <div className={classNames(styles["profile-user"])}>
-                    
-                    <Avatar url={avatar} verified = {verified} size = {150} className={classNames(styles.avatar)}></Avatar>
+                    <div className={classNames(styles.avDiv)}>
+                    <Avatar url={avatar} verified = {verified} size={150} className={classNames(styles.avatar)}></Avatar>
+                    </div>
                     <Typography className={classNames(styles.name)} align='center' variant="h3" gutterBottom component="div">{name}</Typography>
                     <Typography className={classNames(styles.info)} align='center' variant="body1" color="text.secondary" gutterBottom component="div">{info}</Typography>
                     

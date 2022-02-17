@@ -3,9 +3,16 @@
 .profile-user{
     margin-left: 5%;
     width: 40%;
-    
+
     
 }
 .avatar{
-    padding-left:100px;
+    
+    flex: 1;
+    
+}
+.avDiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom:5%;
 }
