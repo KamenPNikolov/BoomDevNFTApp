@@ -11,13 +11,15 @@ import { useRouter } from 'next/router';
 export default function Featured({items = []}){
     const router = useRouter();
     const ImageArray = [];
+
+     
    // console.log(items);
     for (let i=0;i<items.length;i++) {
     ImageArray.push(<ImageListItem  className={classNames(styles.image)} 
      key={items[i].image} cols={items[i].cols || 1} rows={items[i].rows || 1}
      
      >
-        <img onClick={() => router.push('product/363')} src = {items[i].image} alt={items[i].title} loading="lazy"/> 
+        <img onClick={() =>  router.push('product/363')} src = {items[i].image} alt={items[i].title} loading="lazy"/> 
         </ImageListItem>);    
       }
     return(

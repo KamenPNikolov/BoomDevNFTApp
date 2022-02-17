@@ -30,6 +30,7 @@ import ProductContainer from "../src/components/product/ProductContainer";
 import Hero from "../src/components/hero/Hero";
 import Description from "../src/components/description/Description";
 import ProfileHero from "../src/components/profile/ProfileHero";
+import ProfileUser from "../src/components/profile/ProfileUser";
 
 export default function Index() {
   //return <Example />;
@@ -285,6 +286,7 @@ React.useEffect(() => {
     ></Description>
 
     <ProfileHero image = "https://image.shutterstock.com/image-illustration/abstract-plexus-structure-many-glowing-260nw-1203459940.jpg"></ProfileHero>
+    <ProfileUser verified={true} avatar = "/images/avatar.png" name="kemimaro3"  info="What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"></ProfileUser>
     <Footer></Footer>
 
 
