@@ -1,13 +1,14 @@
 @use "../../styles/colors";
 
 .profile-collection-filters{
-
+    margin-left:5%;
 }
 .search{
     color: colors.$text_primary;
     background-color: colors.$background_paper ;
     
     border-radius: 30px;
+    max-height: 40px;
 }
 
 .icon{
@@ -15,5 +16,5 @@
 }
 .select{
     border-radius: 15%;
-    max-height: 40px;
+    min-height: 80px;
 }

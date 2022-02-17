@@ -29,10 +29,10 @@ export default function ProfileCollectionFilters({filters={sort: [], price:[]}})
     return (
       
       <div className={classNames(styles["profile-collection-filters"])}>
-        <Stack direction = "row" spacing = {2}>
-        <FormControl variant="filled" sx={{minWidth: 150, maxHeight: 40}}>
+        <Stack direction = "row" spacing = {2} alignItems="center">
+        <FormControl variant="filled" sx={{minWidth: 150}}>
         <InputLabel id="sort-select-standard-label">Sort by</InputLabel>
-          <Select  className={classNames(styles.select)} value={sortBy} onChange = {handleSortChange} labelId="sort-select-standard-label" >
+          <Select  className={classNames(styles.select)} variant='outlined' value={sortBy} onChange = {handleSortChange} labelId="sort-select-standard-label" >
             {filters.sort.map((element)=>(
                 <MenuItem value={element.value}> {element.label} </MenuItem> 
                  ))
@@ -41,7 +41,7 @@ export default function ProfileCollectionFilters({filters={sort: [], price:[]}})
         </FormControl> 
         <FormControl variant="filled" sx={{minWidth: 150 }}>
         <InputLabel id="price-select-standard-label">Price Range</InputLabel>
-          <Select className={classNames(styles.select)} value={priceRange} onChange = {handlePriceChange} labelId="price-select-standard-label" >
+          <Select className={classNames(styles.select)}  variant='outlined' value={priceRange} onChange = {handlePriceChange} labelId="price-select-standard-label" >
           {filters.price.map((element)=>(
                 <MenuItem value={element.value}> {element.label} </MenuItem> 
             ))
