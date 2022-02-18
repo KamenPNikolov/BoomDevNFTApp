@@ -10,15 +10,15 @@ import Typography from "@mui/material/Typography";
  import Card from "../card/Card";
 
 export default function  ProfileCollection({user,filters,items=[]}){
-   console.log(user);
+  // console.log(user);
     return (
         <div className={classNames(styles["profile-collection"])}>
         <Container className={classNames(styles.container)} maxWidth="lg">
-             <Grid container  direction="row" justifyContent="space-between"  alignItems="center" className={classNames(styles["grid"])}>
+             <Grid container  direction="row" justifyContent="space-between"  spacing = {15} alignItems="center" className={classNames(styles["grid"])}>
                  <Grid item xs="3"  >
                  <Typography className={classNames(styles.name)} align='center' variant="h3" gutterBottom component="div">Collection</Typography>
                  </Grid>
-                <Grid  item xs = "9" >
+                <Grid  item xs = "7" >
                 <ProfileCollectionFilters filters = {filters}></ProfileCollectionFilters>
                 </Grid>
             </Grid> 

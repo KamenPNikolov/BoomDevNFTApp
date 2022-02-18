@@ -15,11 +15,11 @@ export default function Featured({items = []}){
      
    // console.log(items);
     for (let i=0;i<items.length;i++) {
-    ImageArray.push(<ImageListItem  className={classNames(styles.image)} 
+    ImageArray.push(<ImageListItem  
      key={items[i].image} cols={items[i].cols || 1} rows={items[i].rows || 1}
      
      >
-        <img onClick={() =>  router.push('product/363')} src = {items[i].image} alt={items[i].title} loading="lazy"/> 
+        <img className={classNames(styles.image)}  onClick={() =>  router.push('product/363')} src = {items[i].image} alt={items[i].title} loading="lazy"/> 
         </ImageListItem>);    
       }
     return(

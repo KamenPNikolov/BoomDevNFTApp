@@ -6,10 +6,10 @@
     
 }
 .light{
-    background-color: rgba(colors.$background_paper,30%) 
+    background-color: rgba(colors.$primary_main,30%) 
 }
 .dark{
-    background-color: rgba(colors.$background_paper,60%) 
+    background-color: rgba(colors.$primary_main,60%) 
 }
 .number{
     width:15%;
@@ -18,10 +18,10 @@
     margin-right:20%;
 }
 .darknumber{
-    background-color: rgba(colors.$background_paper,50%) 
+    background-color: rgba(colors.$primary_main,50%) 
 }
 .lightnumber{
-    background-color: rgba(colors.$background_paper,20%) 
+    background-color: rgba(colors.$primary_main,20%) 
 }
 .user{
     margin-left:20%;

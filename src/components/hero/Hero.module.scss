@@ -1,11 +1,15 @@
 @use "../../styles/colors";
 
 .hero{
+
     width:100%;
     background-color: colors.$primary_main;
     font-weight: bold;
     min-height:300px;
+    align-items: center;
+    justify-content: center;
 }
 .text{
+    padding-top: 3%;
     margin-left:5%;
 }

@@ -7,6 +7,7 @@ import Select from "@mui/material/Select";
 import MenuItem from '@mui/material/MenuItem';
 import CollectorColumn from "../collectors/CollectorColumn";
 import _ from 'lodash';
+import Box from "@mui/material/Box";
 
 export default function TopCollectors({collectors = []}){
     const mapped = collectors.map(({name,nftsCount,avatar,verified},index) => {
@@ -26,8 +27,9 @@ export default function TopCollectors({collectors = []}){
             <MenuItem value={30}>This Month</MenuItem>
         </Select> 
         <Grid className={classNames(styles.grid)}  container direction="row" justifyContent="center"  >
+        
         {chunks.map((itemsForCollector) => (
-         <Grid item xs="2.8">   
+         <Grid item xs="2.8"> 
          <CollectorColumn items={itemsForCollector}></CollectorColumn>
          </Grid>
        )

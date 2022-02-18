@@ -36,6 +36,7 @@ import profiles from "../data/profile.json";
 import profileFilters from "../data/filtersProfile.json";
 import ProfileCollection from "../src/components/profile/ProfileCollection";
 
+
 export default function Index() {
   //return <Example />;
   const [featuredCards, setFeaturedCards] = React.useState([]);
@@ -43,14 +44,15 @@ export default function Index() {
   const [nftCards,setNftCards] = React.useState([]);
   const [profileProps,setProfiles] = React.useState();
   const [profileFilterProps,setProfileFilters] = React.useState();
+  
 React.useEffect(() => {
     setFeaturedCards(dataFeatured);
     setTrendingCards(dataTrending);
     setNftCards(dataNfts);
     setProfiles(profiles);
-    console.log(profiles);
+    //console.log(profiles);
     setProfileFilters(profileFilters);
-    console.log(profileFilters);
+    //console.log(profileFilters);
 }, []);
   
   const propsForTrending = [

@@ -17,7 +17,7 @@ export default function How({description="",title="",items=[],link=""}) {
     return (
       
       <Container className={classNames(styles.container)} maxWidth="xl" >
-       <Grid container  direction="row" justifyContent="center"   alignItems="center">
+       <Grid container  direction="row" justifyContent="center"   alignItems="center" >
           <Grid item xs="5">
               <h1 className={classNames(styles.heading)} ><b>{title}</b></h1>
               <p >{description}</p>
