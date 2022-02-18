@@ -7,7 +7,7 @@ import ProfileCollectionFilters from './ProfileCollectionFilters';
 import profiles from "../../../data/profile.json";
 
 
-export default function  ProfileCollection({user,filter,items}){
+export default function  ProfileCollection({user,filters,items}){
 
     return (
         <div className={classNames(styles["profile-collection"])}>
@@ -17,7 +17,7 @@ export default function  ProfileCollection({user,filter,items}){
                  <Typography className={classNames(styles.name)} align='center' variant="h3" gutterBottom component="div">Collection</Typography>
                  </Grid>
                 <Grid  item xs = "9" >
-                <ProfileCollectionFilters filters = {filter}></ProfileCollectionFilters>
+                <ProfileCollectionFilters filters = {filters}></ProfileCollectionFilters>
                 </Grid>
             </Grid> 
             <Grid container container spacing={3} className={classNames(styles["grid"])}>
