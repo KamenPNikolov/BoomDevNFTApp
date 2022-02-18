@@ -26,7 +26,7 @@ export default function Card({name="",likes = 0, mediaUrl = "", user = {avatar: 
     
     return (
       
-    <myModule.Card sx={{ maxWidth: 500 }} className={classNames(styles.card)}>
+    <myModule.Card sx={{ maxWidth: 500}} className={classNames(styles.card)}>
       <CardHeader
         avatar={
           <Avatar verified = {user.verified} url = {user.avatar.url}></Avatar>
@@ -35,6 +35,7 @@ export default function Card({name="",likes = 0, mediaUrl = "", user = {avatar: 
       {liveIcon}
       <CardMedia className={classNames(styles.media)}
         component="img"
+        height = "180"
         image={mediaUrl}
         alt="NFT Media"
       />

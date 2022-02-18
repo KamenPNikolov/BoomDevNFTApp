@@ -1,14 +1,16 @@
 import * as React from 'react';
 import classNames from "classnames";
 import Button from "@mui/material/Button";
-import styles from "./Featured.module.scss";
+import styles from "./ProfileCollection.module.scss";
 import Container from "@mui/material/Container";
 import ProfileCollectionFilters from './ProfileCollectionFilters';
 import profiles from "../../../data/profile.json";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+ import Card from "../card/Card";
 
-
-export default function  ProfileCollection({user,filters,items}){
-
+export default function  ProfileCollection({user,filters,items=[]}){
+   console.log(user);
     return (
         <div className={classNames(styles["profile-collection"])}>
         <Container className={classNames(styles.container)} maxWidth="lg">
@@ -22,8 +24,8 @@ export default function  ProfileCollection({user,filters,items}){
             </Grid> 
             <Grid container container spacing={3} className={classNames(styles["grid"])}>
             {items.map((c1) => (
-                <Grid item xs="3" lg>
-                <Card name={c1.name} mediaUrl={c1.mediaUrl} user = {c1.user} price = {c1.price} currency =  {c1.currency} likes={c1.likes}></Card>
+                <Grid item xs="3" >
+                <Card name={c1.name} mediaUrl={c1.source.url} user = {user} price = {c1.price} currency =  {c1.currency} likes={c1.likes}></Card>
                 </Grid>
                  )
                 )}

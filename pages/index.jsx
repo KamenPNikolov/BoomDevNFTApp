@@ -32,16 +32,25 @@ import Description from "../src/components/description/Description";
 import ProfileHero from "../src/components/profile/ProfileHero";
 import ProfileUser from "../src/components/profile/ProfileUser";
 import ProfileCollectionFilters from "../src/components/profile/ProfileCollectionFilters";
+import profiles from "../data/profile.json";
+import profileFilters from "../data/filtersProfile.json";
+import ProfileCollection from "../src/components/profile/ProfileCollection";
 
 export default function Index() {
   //return <Example />;
   const [featuredCards, setFeaturedCards] = React.useState([]);
   const [trendingCards, setTrendingCards] = React.useState([]);
   const [nftCards,setNftCards] = React.useState([]);
+  const [profileProps,setProfiles] = React.useState();
+  const [profileFilterProps,setProfileFilters] = React.useState();
 React.useEffect(() => {
     setFeaturedCards(dataFeatured);
     setTrendingCards(dataTrending);
     setNftCards(dataNfts);
+    setProfiles(profiles);
+    console.log(profiles);
+    setProfileFilters(profileFilters);
+    console.log(profileFilters);
 }, []);
   
   const propsForTrending = [
@@ -309,6 +318,7 @@ const itemsForCollectionFilter =
     <ProfileUser verified={true} avatar = "/images/avatar.png" name="kemimaro3"  info="What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"></ProfileUser>
 
     <ProfileCollectionFilters filters ={itemsForCollectionFilter} ></ProfileCollectionFilters>
+    <ProfileCollection user = {profiles} filters = {profileFilters} items = {profiles.nfts}></ProfileCollection>
     <Footer></Footer>
 
 

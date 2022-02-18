@@ -16,8 +16,8 @@ import { PriceChange } from '@mui/icons-material';
 import FormControl from "@mui/material/FormControl";
 
 export default function ProfileCollectionFilters({filters={sort: [], price:[]}}) {
-    const [sortBy, setSort] = React.useState(0);
-    const [priceRange, setPrice] = React.useState(0);
+    const [sortBy, setSort] = React.useState();
+    const [priceRange, setPrice] = React.useState();
     //console.log(filters.sort);
    // console.log(filters.price);
    const handleSortChange = (event)=>{
