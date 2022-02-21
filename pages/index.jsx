@@ -35,6 +35,8 @@ import ProfileCollectionFilters from "../src/components/profile/ProfileCollectio
 import profiles from "../data/profile.json";
 import profileFilters from "../data/filtersProfile.json";
 import ProfileCollection from "../src/components/profile/ProfileCollection";
+import ActivityFilters from "../src/components/activity/ActivityFilters";
+import activityFilt from "../data/filtersActivity.json";
 
 
 export default function Index() {
@@ -316,11 +318,7 @@ const itemsForCollectionFilter =
     image = "https://upload.wikimedia.org/wikipedia/commons/7/71/Small_pie.svg"
     ></Description>
 
-    <ProfileHero image = "https://image.shutterstock.com/image-illustration/abstract-plexus-structure-many-glowing-260nw-1203459940.jpg"></ProfileHero>
-    <ProfileUser verified={true} avatar = "/images/avatar.png" name="kemimaro3"  info="What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"></ProfileUser>
-
-    <ProfileCollectionFilters filters ={itemsForCollectionFilter} ></ProfileCollectionFilters>
-    <ProfileCollection user = {profiles} filters = {profileFilters} items = {profiles.nfts}></ProfileCollection>
+    <ActivityFilters filters={activityFilt}></ActivityFilters>
     <Footer></Footer>
 
 

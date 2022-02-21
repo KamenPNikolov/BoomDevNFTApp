@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from "classnames";
-import styles from "./ProfileCollectionFilters.module.scss";
+import styles from "./ActivityFilters.module.scss";
 import  Typography  from '@mui/material/Typography';
 import Grid from "@mui/material/Grid";
 import Input from "@mui/material/Input";
@@ -15,20 +15,20 @@ import Stack from '@mui/material/Stack';
 import { PriceChange } from '@mui/icons-material';
 import FormControl from "@mui/material/FormControl";
 
-export default function ProfileCollectionFilters({filters={sort: [], price:[]}}) {
+export default function ActivityFilters({filters={sort: [], type:[]}}) {
     const [sortBy, setSort] = React.useState();
-    const [priceRange, setPrice] = React.useState();
+    const [types, setType] = React.useState();
     //console.log(filters.sort);
    // console.log(filters.price);
    const handleSortChange = (event)=>{
         setSort(event.target.value);
     };
-    const handlePriceChange = (event)=>{
-        setPrice(event.target.value);
+    const handleTypeChange = (event)=>{
+        setType(event.target.value);
     };
     return (
       
-      <div className={classNames(styles["profile-collection-filters"])}>
+      <div className={classNames(styles["activity-collection-filters"])}>
         <Stack direction = "row" spacing = {2} alignItems="center">
         <FormControl variant="filled" sx={{minWidth: 150}}>
         <InputLabel  id="sort-select-standard-label">Sort by</InputLabel>
@@ -40,15 +40,15 @@ export default function ProfileCollectionFilters({filters={sort: [], price:[]}})
             </Select>
         </FormControl> 
         <FormControl variant="filled" sx={{minWidth: 150 }}>
-        <InputLabel id="price-select-standard-label">Price Range</InputLabel>
-          <Select className={classNames(styles.select)}  variant='outlined' value={priceRange} onChange = {handlePriceChange} labelId="price-select-standard-label" >
-          {filters.price.map((element)=>(
+        <InputLabel id="type-select-standard-label">Type</InputLabel>
+          <Select className={classNames(styles.select)}  variant='outlined' value={types} onChange = {handleTypeChange} labelId="type-select-standard-label" >
+          {filters.type.map((element)=>(
                 <MenuItem value={element.value}> {element.label} </MenuItem> 
             ))
             }
           </Select>
         </FormControl>        
-          <TextField  sx={{minWidth: 150 }} className  = {classNames(styles.search)}  variant="standard" InputProps={{startAdornment: <InputAdornment position="start"><Search className  = {classNames(styles.icon)}/></InputAdornment>}}></TextField>
+          <TextField  className  = {classNames(styles.search)}  variant="standard" InputProps={{startAdornment: <InputAdornment position="start"><Search className  = {classNames(styles.icon)}/></InputAdornment>}}></TextField>
           </Stack>
       </div>
       
