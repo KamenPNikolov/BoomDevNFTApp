@@ -28,7 +28,7 @@ export default function ActivityFilters({filters={sort: [], type:[]}}) {
     };
     return (
       
-      <div className={classNames(styles["activity-collection-filters"])}>
+      <div className={classNames(styles["activity-filters"])}>
         <Stack direction = "row" spacing = {2} alignItems="center">
         <FormControl variant="filled" sx={{minWidth: 150}}>
         <InputLabel  id="sort-select-standard-label">Sort by</InputLabel>
