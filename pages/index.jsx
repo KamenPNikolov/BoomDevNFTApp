@@ -37,6 +37,8 @@ import profileFilters from "../data/filtersProfile.json";
 import ProfileCollection from "../src/components/profile/ProfileCollection";
 import ActivityFilters from "../src/components/activity/ActivityFilters";
 import activityFilt from "../data/filtersActivity.json";
+import ActivityListItem from "../src/components/activity/ActivityListItem";
+import activities from "../data/activity.json";
 
 
 export default function Index() {
@@ -319,6 +321,7 @@ const itemsForCollectionFilter =
     ></Description>
 
     <ActivityFilters filters={activityFilt}></ActivityFilters>
+    <ActivityListItem user = {activities[0].user} created_at={activities[0].created_at } nft={activities[0].nft} type={activities[0].type}></ActivityListItem>
     <Footer></Footer>
 
 
