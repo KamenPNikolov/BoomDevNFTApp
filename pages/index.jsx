@@ -319,7 +319,7 @@ const itemsForCollectionFilter =
     <Description text = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
     image = "https://upload.wikimedia.org/wikipedia/commons/7/71/Small_pie.svg"
     ></Description>
-
+     <Avatar   url = "images/avatar.png"  size={60}></Avatar>
     <ActivityFilters filters={activityFilt}></ActivityFilters>
     <ActivityListItem user = {activities[0].user} created_at={activities[0].created_at } nft={activities[0].nft} type={activities[0].type}></ActivityListItem>
     <Footer></Footer>
