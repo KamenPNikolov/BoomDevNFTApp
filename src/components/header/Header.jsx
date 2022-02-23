@@ -24,7 +24,7 @@ export default function Header() {
         </Grid>
         <Grid item xs>
         <Button className  = {classNames(styles.button)} variant="text" onClick={() =>  router.push('/')}>Home</Button>
-        <Button  variant="text">Activity</Button>
+        <Button  variant="text" onClick={() =>  router.push('/activity/')} >Activity</Button>
         <Button   variant="contained" >Explore</Button>
         </Grid>
       </Grid>

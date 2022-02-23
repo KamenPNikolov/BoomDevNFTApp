@@ -37,7 +37,7 @@ import profileFilters from "../data/filtersProfile.json";
 import ProfileCollection from "../src/components/profile/ProfileCollection";
 import ActivityFilters from "../src/components/activity/ActivityFilters";
 import activityFilt from "../data/filtersActivity.json";
-import ActivityListItem from "../src/components/activity/ActivityListItem";
+import ActivityList from "../src/components/activity/ActivityList";
 import activities from "../data/activity.json";
 
 
@@ -321,7 +321,7 @@ const itemsForCollectionFilter =
     ></Description>
      <Avatar   url = "images/avatar.png"  size={60}></Avatar>
     <ActivityFilters filters={activityFilt}></ActivityFilters>
-    <ActivityListItem user = {activities[0].user} created_at={activities[0].created_at } nft={activities[0].nft} type={activities[0].type}></ActivityListItem>
+    <ActivityList items={activities}></ActivityList>
     <Footer></Footer>
 
 

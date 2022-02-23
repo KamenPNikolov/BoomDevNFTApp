@@ -30,7 +30,7 @@ export default function ActivityFilters({filters={sort: [], type:[]}}) {
       
       <div className={classNames(styles["activity-filters"])}>
         <Stack direction = "row" spacing = {2} alignItems="center">
-        <FormControl variant="filled"   size='small' sx={{minWidth: 150}}>
+        <FormControl variant="filled"  margin="dense"  size="small"  sx={{minWidth: 150 }} >
         <InputLabel   id="sort-select-standard-label">Sort by</InputLabel>
           <Select   className={classNames(styles.select)} variant='outlined' value={sortBy} onChange = {handleSortChange} labelId="sort-select-standard-label" >
             {filters.sort.map((element)=>(
@@ -40,7 +40,7 @@ export default function ActivityFilters({filters={sort: [], type:[]}}) {
             </Select>
         </FormControl> 
         <FormControl variant="filled"  size='small' sx={{minWidth: 150 }}>
-        <InputLabel id="type-select-standard-label">Type</InputLabel>
+        <InputLabel    id="type-select-standard-label">Type</InputLabel>
           <Select className={classNames(styles.select)}  variant='outlined' value={types} onChange = {handleTypeChange} labelId="type-select-standard-label" >
           {filters.type.map((element)=>(
                 <MenuItem value={element.value}> {element.label} </MenuItem> 
