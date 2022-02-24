@@ -39,6 +39,9 @@ import ActivityFilters from "../src/components/activity/ActivityFilters";
 import activityFilt from "../data/filtersActivity.json";
 import ActivityList from "../src/components/activity/ActivityList";
 import activities from "../data/activity.json";
+import filtersExplore from "../data/filtersExplore.json";
+import ExploreTitle from "../src/components/explore/ExploreTitle";
+import ExploreFilters from "../src/components/explore/ExploreFilters";
 
 
 export default function Index() {
@@ -319,9 +322,9 @@ const itemsForCollectionFilter =
     <Description text = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
     image = "https://upload.wikimedia.org/wikipedia/commons/7/71/Small_pie.svg"
     ></Description>
-     <Avatar   url = "images/avatar.png"  size={60}></Avatar>
-    <ActivityFilters filters={activityFilt}></ActivityFilters>
-    <ActivityList items={activities}></ActivityList>
+
+    <ExploreTitle text="Explore"></ExploreTitle>
+    <ExploreFilters filters={filtersExplore}></ExploreFilters>
     <Footer></Footer>
 
 

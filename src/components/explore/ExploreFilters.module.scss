@@ -1,0 +1,25 @@
+@use "../../styles/colors";
+
+.explore-filters{
+    margin-left:50%;
+    //margin-top: -10%;
+    margin-bottom: 3%;
+}
+.search{
+    color: colors.$text_primary;
+    background-color: colors.$background_paper ;
+    
+    border-radius: 30px;
+    min-width:200px;
+    
+   
+}
+
+.icon{
+    color: colors.$text_hint;
+}
+.select{
+    border-radius: 15%;
+   min-height: 80px;
+   
+}
