@@ -2,16 +2,32 @@ import * as React from "react";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import filtersExplore from "../../data/filtersExplore.json";
 import ExploreTitle from "../../src/components/explore/ExploreTitle";
 import ExploreFilters from "../../src/components/explore/ExploreFilters";
-import nfts from "../../data/nfts.json";
 import Header from "../../src/components/header/Header";
 import Footer from "../../src/components/footer/Footer";
 import Card from "../../src/components/card/Card";
 
 
 export default function ExplorePage(){
+    const [nfts, setNfts] = React.useState([]);
+    const [nftFilters, setNftFilters] = React.useState();
+    async function fetchNfts(){
+      const fetchJson = async ()=>{
+        const response = await fetch(process.env.apiUrl+"/explore");
+        const results = await response.json();  
+        return results;
+        };
+      const jsons = await  fetchJson();
+      console.log(jsons);
+      setNfts(jsons.nfts);
+      setNftFilters(jsons.filters);
+    }
+    React.useEffect(() => {
+        fetchNfts();
+    }, []);
+    
+
     return (
 
         <div style={{width:"100%"}}>   
@@ -23,7 +39,7 @@ export default function ExplorePage(){
                     <ExploreTitle text="Explore"></ExploreTitle>
                  </Grid>
                 <Grid  item xs = "7" >
-                    {filtersExplore && <ExploreFilters filters={filtersExplore}></ExploreFilters>}
+                    {<ExploreFilters filters={nftFilters}></ExploreFilters>}
                 </Grid>
             </Grid> 
             <Grid container spacing={3} maxWidth="lg" sx={{marginLeft: 3}}>
