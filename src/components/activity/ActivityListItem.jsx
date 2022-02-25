@@ -10,7 +10,7 @@ export default function ActivityListItem({user,created_at,nft, type="like"}){
 
     return (
         <div className={classNames(styles["activity-list-item"])}>
-           <Stack direction = "row" spacing = {1} alignItems="center" justifyContent="space-evenly">
+           <Stack direction = "row" spacing = {10} alignItems="center" justifyContent="flex-start" sx={{marginLeft:3}}>
             <Avatar  className={classNames(styles.avatar)} verified = {user.verified} url = {user.avatar.url} size={60}></Avatar>
             <div>
             
