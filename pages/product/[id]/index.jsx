@@ -7,7 +7,7 @@ import * as React from 'react';
 import Container from "@mui/material/Container";
 
 export default function Product() {
-    const [nft, setNft] = React.useState();
+    const [product, setProduct] = React.useState();
     const router =useRouter();
 
     async function fetchProduct(){
@@ -17,26 +17,20 @@ export default function Product() {
         return results;
         };
       const jsons = await  fetchJson();
-      setNft(jsons);
+      setProduct(jsons);
     }
     React.useEffect(() => {
         fetchProduct();
     }, [router]);
     
-    
-    
-    //console.log(router.query);
-   // console.log(dataNfts);
-   // const { id } = router.query;
-   // const nft = nfts.find(x => x.id==(parseInt(id)));
 
     return (
         <div style={{width:"100%"}}>   
     <Header></Header>
-    {nft &&
-    <ProductContainer name={nft.name} source={nft.source} owner={nft.owner} price = {nft.price} currency = {nft.currency} likes = {nft.likes} auction_end={nft.auction_end} 
-    details = {nft.details}
-    bids={nft.bids}
+    {product &&
+    <ProductContainer name={product.name} source={product.source} owner={product.owner} price = {product.price} currency = {product.currency} likes = {product.likes} auction_end={product.auction_end} 
+    details = {product.details}
+    bids={product.bids}
     ></ProductContainer>
     }
     <Footer></Footer>
