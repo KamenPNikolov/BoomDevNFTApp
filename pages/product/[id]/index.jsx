@@ -7,50 +7,28 @@ import * as React from 'react';
 import Container from "@mui/material/Container";
 
 export default function Product() {
-    const [nfts, setNfts] = React.useState([]);
+    const [nft, setNft] = React.useState();
     const router =useRouter();
+
+    async function fetchProduct(){
+      const fetchJson = async ()=>{
+        const response = await fetch(process.env.apiUrl+"/nfts/"+router.query.id);
+        const results = await response.json();  
+        return results;
+        };
+      const jsons = await  fetchJson();
+      setNft(jsons);
+    }
     React.useEffect(() => {
-        console.log(router.query);
-        console.log(dataNfts);
-        setNfts(dataNfts);
+        fetchProduct();
     }, [router]);
     
     
     
     //console.log(router.query);
    // console.log(dataNfts);
-    const { id } = router.query;
-    const nft = nfts.find(x => x.id==(parseInt(id)));
-    //console.log(nft);
-    const itemsForBids=[
-        {
-          user:{
-            avatar: "/images/avatar.png",
-            name: "kemimaro1",
-            verified: true
-          },
-          amount: 3,
-          date: "2019-09-25T14:34:32.999Z"
-        },
-        {
-          user:{
-            avatar: "/images/avatar.png",
-            name: "kemimaro2",
-            verified: false
-          },
-          amount: 2,
-          date: "2020-09-25T14:34:32.999Z"
-        },
-        {
-          user:{
-            avatar: "/images/avatar.png",
-            name: "kemimaro3",
-            verified: true
-          },
-          amount: 1,
-          date: "2019-09-25T14:34:32.999Z"
-        }
-      ];
+   // const { id } = router.query;
+   // const nft = nfts.find(x => x.id==(parseInt(id)));
 
     return (
         <div style={{width:"100%"}}>   

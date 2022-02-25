@@ -16,7 +16,7 @@ export default function Collector({name = "",avatar, verified = false,type = 0, 
     const router = useRouter();
   return (
     <div className={classNames(styles.container,darkOrLight )} onClick={() =>  router.push('/profile/401')}>
-        <Grid container  direction="row" justifyContent="space-around"  alignItems="stretch">
+        <Grid container  direction="row" justifyContent="flex-start"  alignItems="stretch">
         <Grid item xs="3" className={classNames(darkOrLightNumber )} >
             <b className={classNames(styles.number)} >{id}</b>
         </Grid>
