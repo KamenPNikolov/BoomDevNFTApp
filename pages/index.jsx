@@ -13,44 +13,20 @@ import Featured from "../src/components/featured/Featured";
 import Collector from "../src/components/collectors/Collector";
 import CollectorColumn from "../src/components/collectors/CollectorColumn";
 import TopCollectors from "../src/components/collectors/TopCollectors";
-import ProductImage from "../src/components/product/ProductImage";
-import dataActivity from "../data/activity.json";
-import dataFeatured from "../data/featured.json";
-import dataTrending from "../data/trending.json";
-import dataUsers from "../data/users.json";
-import dataNfts from "../data/nfts.json";
-import ProductInfoStatus from "../src/components/product/ProductInfoStatus";
-import ProductInfoLikes from "../src/components/product/ProductInfoLikes";
-import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
-import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
-import ProductInfo from "../src/components/product/ProductInfo";
-import ProductTabs from "../src/components/product/ProductTabs";
-import ProductActions from "../src/components/product/ProductActions";
-import ProductContainer from "../src/components/product/ProductContainer";
-import Hero from "../src/components/hero/Hero";
-import Description from "../src/components/description/Description";
-import ProfileHero from "../src/components/profile/ProfileHero";
-import ProfileUser from "../src/components/profile/ProfileUser";
-import ProfileCollectionFilters from "../src/components/profile/ProfileCollectionFilters";
-import profiles from "../data/profile.json";
-import profileFilters from "../data/filtersProfile.json";
-import ProfileCollection from "../src/components/profile/ProfileCollection";
-import ActivityFilters from "../src/components/activity/ActivityFilters";
-import activityFilt from "../data/filtersActivity.json";
-import ActivityList from "../src/components/activity/ActivityList";
-import activities from "../data/activity.json";
-import filtersExplore from "../data/filtersExplore.json";
-import ExploreTitle from "../src/components/explore/ExploreTitle";
-import ExploreFilters from "../src/components/explore/ExploreFilters";
+import { format, formatDistance, formatRelative, subDays, parseISO } from 'date-fns';
+
+
 
 export default function Index() {
   //return <Example />;
   const [featuredCards, setFeaturedCards] = React.useState([]);
   const [trendingItems, setTrendingItems] = React.useState([]);
   const [trendingFilters, setTrendingFilters] = React.useState();
-  const [nftCards,setNftCards] = React.useState([]);
-  const [profileProps,setProfiles] = React.useState();
-  const [profileFilterProps,setProfileFilters] = React.useState();
+  const [auctions,setAuctions] = React.useState();
+  const [auctionFilter,setAuctionFilter] = React.useState();
+  const [collectors,setCollectors] = React.useState();
+  const [collectorFilters,setCollectorFilters] = React.useState();
+
 
   async function fetchFeatured(){
     const fetchJson = async ()=>{
@@ -72,100 +48,44 @@ export default function Index() {
     const jsons = await  fetchJson();
     setTrendingItems(jsons.nfts);
     setTrendingFilters(jsons.filters);
+    
   }
+  async function fetchAuctions(){
+    const fetchJson = async ()=>{
+      const response = await fetch(process.env.apiUrl+"/live-auctions");
+      const results = await response.json();  
+      return results;
+      };
+    const jsons = await  fetchJson();
+    setAuctions(jsons.nfts);
+    setAuctionFilter(jsons.filters);
+  }
+  async function fetchCollectors(){
+    const fetchJson = async ()=>{
+      const response = await fetch(process.env.apiUrl+"/top-collectors");
+      const results = await response.json();  
+      return results;
+      };
+    const jsons = await  fetchJson();
+    
+    const nfts = jsons.users.sort((a, b) => (a.nftCount > b.nftCount) ? -1 : 1);
+    setCollectors(nfts);
+    setCollectorFilters(jsons.filters);
+    console.log(jsons);
+  
+  }
+
+
 
   
 React.useEffect(() => {
    fetchFeatured();
-    fetchTrending();
+   fetchTrending();
+   fetchAuctions();
+   fetchCollectors();
 }, []);
   
-  const propsForTrending = [
-     {name:"Ivy",
-     user:{avatar:{url:"images/avatar.png"},verified:true},
-     mediaUrl:"images/nft.jpg",
-     price:1,
-     currency:"ETH",
-     timeLeft: 100000,
-     likes: 11000
-    }
-    ,{
-      name:"Judie",
-      user:{avatar:{url:"images/avatar.png"},verified:true},
-      mediaUrl:"images/nft.jpg",
-      price:2.3,
-      currency:"ETH", 
-      timeLeft: 1000000
-      }
-    ,{
-      name:"Juniper",
-      user:{avatar:{url:"images/avatar.png"},verified:true},
-      mediaUrl:"images/nft.jpg",
-      price:5,
-      currency:"ETH", 
-      timeLeft: 1000000 
-    }
-    ,{
-      name:"Maples",
-      user:{avatar:{url:"images/avatar.png"},verified:true},
-      mediaUrl:"images/nft.jpg",
-      price:10,
-      currency:"ETH", 
-      timeLeft: 1000000 
-    }
-  ];
-
-  const itemsForFeatured = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=500&h=500",
-      title: "Breakfast",
-      rows: 2,
-      cols: 3,
-      href: "/about",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=500&h=500",
-      title: "Burger",
-      href: "/about",
-
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1522770179533-24471fcdba45?w=500&h=500",
-      title: "Camera",
-      href: "/about",
-
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?w=500&h=500",
-      title: "Coffee",
-      href: "/about",
-
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1533827432537-70133748f5c8?w=500&h=500",
-      title: "Hats",
-      href: "/about",
-
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=500&h=500",
-      title: "Honey",
-      href: "/about",
-
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6?w=500&h=500",
-      title: "Basketball",
-      href: "/about",
-    },
-  ];
+ 
   const itemsForHow = [
       {
         title: "Digital Currency",
@@ -316,14 +236,10 @@ const itemsForCollectionFilter =
     
     <Featured items={featuredCards}></Featured>  
      <Trending cards={trendingItems} filters={trendingFilters}></Trending>
-    <TopCollectors collectors = {itemsForCollector}></TopCollectors>
+    <TopCollectors collectors = {collectors} filters={collectorFilters}></TopCollectors>
     <How items = {itemsForHow}  title = "How it works" description = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
        link = "how" ></How>
-    <Auctions cards = {propsForTrending}></Auctions> 
+    <Auctions cards={auctions} filters={auctionFilter}></Auctions> 
     <Footer></Footer>
-
-
-    
-
   </div>;
 }

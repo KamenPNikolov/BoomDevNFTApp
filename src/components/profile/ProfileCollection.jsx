@@ -16,7 +16,7 @@ export default function  ProfileCollection({user,filters,items=[]}){
         <Container className={classNames(styles.container)} maxWidth="lg">
              <Grid container  direction="row" justifyContent="space-between"  spacing = {15} alignItems="center" className={classNames(styles["grid"])}>
                  <Grid item xs="3"  >
-                 <Typography className={classNames(styles.name)} align='center' variant="h3" gutterBottom component="div">Collection</Typography>
+                 <Typography className={classNames(styles.name)} align='center' variant="h3" gutterBottom>Collection</Typography>
                  </Grid>
                 <Grid  item xs = "7" >
                 <ProfileCollectionFilters filters = {filters}></ProfileCollectionFilters>

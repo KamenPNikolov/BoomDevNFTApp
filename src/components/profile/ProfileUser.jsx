@@ -12,8 +12,8 @@ export default function ProfileUser({name="", info="", avatar = "", verified = f
                     <div className={classNames(styles.avDiv)}>
                     <Avatar url={avatar} verified = {verified} size={150} className={classNames(styles.avatar)}></Avatar>
                     </div>
-                    <Typography className={classNames(styles.name)} align='center' variant="h3" gutterBottom component="div">{name}</Typography>
-                    <Typography className={classNames(styles.info)} align='center' variant="body1" color="text.secondary" gutterBottom component="div">{info}</Typography>
+                    <Typography className={classNames(styles.name)} align='center' variant="h3" gutterBottom >{name}</Typography>
+                    <Typography className={classNames(styles.info)} align='center' variant="body1" color="text.secondary" gutterBottom>{info}</Typography>
                     
                 </div>
 

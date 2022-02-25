@@ -6,30 +6,36 @@ import Grid from "@mui/material/Grid";
 import Select from "@mui/material/Select";
 import MenuItem from '@mui/material/MenuItem';
 import CollectorColumn from "../collectors/CollectorColumn";
+import * as React from 'react';
 import _ from 'lodash';
 import Box from "@mui/material/Box";
 
-export default function TopCollectors({collectors = []}){
+export default function TopCollectors({collectors = [], filters = {sort:[]}}){
+    const [sortBy, setSort] = React.useState("desc");
+  
+    const handleSortChange = (event)=>{
+        setSort(event.target.value);
+    };
     const mapped = collectors.map(({name,nftsCount,avatar,verified},index) => {
         let id = index+1;
         return {name,nftsCount,avatar,verified,id}});
-   // console.log(mapped);
-   // console.log("*****");
+   
     const chunks = _.chunk(mapped,3);
-    //console.log(chunks);
+    
     return (
 
     <Container className={classNames(styles.container)} maxWidth="lg">
         <h1 className={classNames(styles.heading)}>Top Collectors</h1>
-        <Select className={classNames(styles.select)} defaultValue = {7}  label="Time" >
-            <MenuItem value={0}>Today </MenuItem>
-            <MenuItem value={7}>This Week</MenuItem>
-            <MenuItem value={30}>This Month</MenuItem>
-        </Select> 
-        <Grid className={classNames(styles.grid)}  container direction="row" justifyContent="center"  >
+        <Select className={classNames(styles.select)}  variant='outlined' value={sortBy} onChange = {handleSortChange}>
+             {filters.sort.map((element,index)=>(
+                <MenuItem value={element.value} key={index}> {element.label} </MenuItem> 
+                 ))
+            }
+    </Select>
+        <Grid className={classNames(styles.grid)} spacing={5}  container direction="row" justifyContent="center"  >
         
         {chunks.map((itemsForCollector) => (
-         <Grid item xs="2.8"> 
+         <Grid item xs="3"> 
          <CollectorColumn items={itemsForCollector}></CollectorColumn>
          </Grid>
        )
