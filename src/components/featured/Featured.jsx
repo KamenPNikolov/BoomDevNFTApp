@@ -20,7 +20,8 @@ export default function Featured({items = []}){
      
      >
         <img className={classNames(styles.image)}  onClick={() =>  router.push("product/"+items[i].id)} src = {items[i].image} alt={items[i].title} loading="lazy"/> 
-        </ImageListItem>);    
+        </ImageListItem>);  
+        console.log(items[i]);  
       }
     return(
         <Container className={classNames(styles.container)} maxWidth="lg">
