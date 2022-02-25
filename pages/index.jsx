@@ -51,15 +51,22 @@ export default function Index() {
   const [nftCards,setNftCards] = React.useState([]);
   const [profileProps,setProfiles] = React.useState();
   const [profileFilterProps,setProfileFilters] = React.useState();
+
+  async function fetchFeaturedJSON() {
+    const response = await fetch("https://nft-auction.herokuapp.com/featured");
+    const results = await response.json();
+    
+    return results;
+    
+  }
+  async function fetchFeatured(){
+    const jsons = await fetchFeaturedJSON();
+    setFeaturedCards(jsons.nfts);
+  }
   
 React.useEffect(() => {
-    setFeaturedCards(dataFeatured);
-    setTrendingCards(dataTrending);
-    setNftCards(dataNfts);
-    setProfiles(profiles);
-    //console.log(profiles);
-    setProfileFilters(profileFilters);
-    //console.log(profileFilters);
+   fetchFeatured();
+    
 }, []);
   
   const propsForTrending = [
@@ -296,35 +303,12 @@ const itemsForCollectionFilter =
   return <div style={{width:"100%"}}>
     <Header></Header>
     
-    <Featured items = {itemsForFeatured}></Featured>  
+    <Featured items = {featuredCards}></Featured>  
      <Trending cards = {propsForTrending}></Trending>
     <TopCollectors collectors = {itemsForCollector}></TopCollectors>
     <How items = {itemsForHow}  title = "How it works" description = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
        link = "how" ></How>
-    <Auctions cards = {propsForTrending}></Auctions>
-   <ProductImage url="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"></ProductImage>
-   <ProductInfoStatus></ProductInfoStatus>
-   <ProductInfoCreator  verified = {true} avatar = "/images/avatar.png" name = "kemimaro"></ProductInfoCreator>
-   <ProductInfoTimer timeEnd={Date.now()+10000000}></ProductInfoTimer>
-   <ProductInfoTimer ></ProductInfoTimer>
-   <ProductInfoLikes amount = {114050}></ProductInfoLikes>
-
-   <ProductInfo title="Sample NFT" creator = { {verified:true, avatar: "/images/avatar.png", name : "kemimaro"}} price = {12} currency = "ETH" likes = {1011000} timeEnd={Date.now()+10000000} isLive={true}></ProductInfo>
-    <ProductTabs text = {"What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"}
-    bids={itemsForBids}>
-    </ProductTabs>
-    <ProductActions isLive={false} currency="ETH" buyAmount={10} bidAmount = {5} ></ProductActions>
-    <ProductContainer name ="Sample NFT"  source={{url:"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"}} owner={{username:"kemimaro",verified:true,avatar:{url:"/images/avatar.png"}}} price = {12} currency = "ETH" likes = {1011000} auction_end={"2022-09-25T14:34:32.999Z"} 
-    details = {"What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"}
-    bids={itemsForBids}
-    ></ProductContainer>
-    <Hero text = "HOW IT WORKS"></Hero>
-    <Description text = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
-    image = "https://upload.wikimedia.org/wikipedia/commons/7/71/Small_pie.svg"
-    ></Description>
-
-    <ExploreTitle text="Explore"></ExploreTitle>
-    <ExploreFilters filters={filtersExplore}></ExploreFilters>
+    <Auctions cards = {propsForTrending}></Auctions> 
     <Footer></Footer>
 
 
