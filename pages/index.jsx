@@ -43,7 +43,6 @@ import filtersExplore from "../data/filtersExplore.json";
 import ExploreTitle from "../src/components/explore/ExploreTitle";
 import ExploreFilters from "../src/components/explore/ExploreFilters";
 
-
 export default function Index() {
   //return <Example />;
   const [featuredCards, setFeaturedCards] = React.useState([]);
@@ -55,7 +54,7 @@ export default function Index() {
 
   async function fetchFeatured(){
     const fetchJson = async ()=>{
-      const response = await fetch("https://nft-auction.herokuapp.com/featured");
+      const response = await fetch(process.env.apiUrl+"/featured");
       const results = await response.json();  
       return results;
       };
@@ -66,12 +65,11 @@ export default function Index() {
   }
   async function fetchTrending(){
     const fetchJson = async ()=>{
-      const response = await fetch("https://nft-auction.herokuapp.com/trending");
+      const response = await fetch(process.env.apiUrl+"/trending");
       const results = await response.json();  
       return results;
       };
     const jsons = await  fetchJson();
-    console.log(jsons);
     setTrendingItems(jsons.nfts);
     setTrendingFilters(jsons.filters);
   }
