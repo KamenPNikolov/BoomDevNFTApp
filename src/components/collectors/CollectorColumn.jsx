@@ -10,8 +10,8 @@ export default function CollectorColumn({items=[]}) {
   return (
     <div  className={classNames(styles.container)} >
       
-       { items.map(({name,nftsCount,avatar,verified,id},index) => (
-         <Collector name ={name} nftsCount={nftsCount} avatar={avatar} verified={verified}  id={id} type={(index+1)%2} ></Collector>
+       { items.map(({name,nftsCount,avatar,verified,id,index},ind) => (
+         <Collector name ={name} nftsCount={nftsCount} avatar={avatar} verified={verified}  id={id} index={index} type={(ind+1)%2} ></Collector>
        )
        )}
     </div>

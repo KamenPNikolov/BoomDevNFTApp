@@ -16,9 +16,9 @@ export default function TopCollectors({collectors = [], filters = {sort:[]}}){
     const handleSortChange = (event)=>{
         setSort(event.target.value);
     };
-    const mapped = collectors.map(({name,nftsCount,avatar,verified},index) => {
-        let id = index+1;
-        return {name,nftsCount,avatar,verified,id}});
+    const mapped = collectors.map(({id,name,nftsCount,avatar,verified},ind) => {
+        let index = ind+1;
+        return {id,name,nftsCount,avatar,verified,index}});
    
     const chunks = _.chunk(mapped,3);
     
