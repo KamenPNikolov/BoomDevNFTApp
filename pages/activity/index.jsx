@@ -11,9 +11,9 @@ export default function ActivityPage(){
     return (
         <div style={{width:"100%"}}>   
             <Header></Header>
-            <Hero text='Activity'></Hero>
-          { activityFilt && <ActivityFilters filters={activityFilt}></ActivityFilters>}
-           { activities && <ActivityList items={activities}></ActivityList>}
+            <Hero text={"Activity"}></Hero>
+            {activityFilt && <ActivityFilters filters={activityFilt}></ActivityFilters>}
+            {activities && <ActivityList items={activities}></ActivityList>}
             <Footer></Footer>
         </div>
         );

@@ -29,7 +29,7 @@ export default function Featured({items = []}){
                 //sx={{ width: 500, height: 450 }}
                 gap = {15}
                 variant="standard"
-                cols={6} rows={2}>
+                cols={6} rows={2} >
                {ImageArray}
             </ImageList>
         </Container>
