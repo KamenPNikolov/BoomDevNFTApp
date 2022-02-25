@@ -47,7 +47,8 @@ import ExploreFilters from "../src/components/explore/ExploreFilters";
 export default function Index() {
   //return <Example />;
   const [featuredCards, setFeaturedCards] = React.useState([]);
-  const [trendingCards, setTrendingCards] = React.useState([]);
+  const [trendingItems, setTrendingItems] = React.useState([]);
+
   const [nftCards,setNftCards] = React.useState([]);
   const [profileProps,setProfiles] = React.useState();
   const [profileFilterProps,setProfileFilters] = React.useState();
@@ -57,12 +58,25 @@ export default function Index() {
       const response = await fetch("https://nft-auction.herokuapp.com/featured");
       const results = await response.json();  
       return results;
-};
+      };
     const jsons = await  fetchJson();
     jsons.nfts[0].cols = 3;
     jsons.nfts[0].rows = 2;
     setFeaturedCards(jsons.nfts);
   }
+  async function fetchТrending(){
+    const fetchJson = async ()=>{
+      const response = await fetch("https://nft-auction.herokuapp.com/trending");
+      const results = await response.json();  
+      return results;
+      };
+    const jsons = await  fetchJson();
+    const nfts = jsons.nfts;
+    const filters = jsons.filters;
+    console.log(nfts);
+    console.log(filters);
+  }
+
   
 React.useEffect(() => {
    fetchFeatured();
@@ -303,8 +317,8 @@ const itemsForCollectionFilter =
   return <div style={{width:"100%"}}>
     <Header></Header>
     
-    <Featured items = {featuredCards}></Featured>  
-     <Trending cards = {propsForTrending}></Trending>
+    <Featured items={featuredCards}></Featured>  
+     <Trending cards={propsForTrending}></Trending>
     <TopCollectors collectors = {itemsForCollector}></TopCollectors>
     <How items = {itemsForHow}  title = "How it works" description = "What is going on here? SOme long text for testing. Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda Yada yada yada ydayda"
        link = "how" ></How>

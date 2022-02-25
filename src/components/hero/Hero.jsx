@@ -9,7 +9,7 @@ export default function Hero({text=""}) {
     return (
       
       <div className={classNames(styles["hero"])}>
-          <Typography className={classNames(styles.text)} align='center' variant="h1" gutterBottom component="div">{text}</Typography>
+          <Typography className={classNames(styles.text)}  align='center' variant="h1" gutterBottom>{text}</Typography>
       </div>
       
     );
