@@ -52,15 +52,13 @@ export default function Index() {
   const [profileProps,setProfiles] = React.useState();
   const [profileFilterProps,setProfileFilters] = React.useState();
 
-  async function fetchFeaturedJSON() {
-    const response = await fetch("https://nft-auction.herokuapp.com/featured");
-    const results = await response.json();
-    
-    return results;
-    
-  }
   async function fetchFeatured(){
-    const jsons = await fetchFeaturedJSON();
+    const fetchJson = async ()=>{
+      const response = await fetch("https://nft-auction.herokuapp.com/featured");
+      const results = await response.json();  
+      return results;
+};
+    const jsons = await  fetchJson();
     jsons.nfts[0].cols = 3;
     jsons.nfts[0].rows = 2;
     setFeaturedCards(jsons.nfts);
