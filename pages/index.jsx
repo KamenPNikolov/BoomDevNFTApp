@@ -61,6 +61,8 @@ export default function Index() {
   }
   async function fetchFeatured(){
     const jsons = await fetchFeaturedJSON();
+    jsons.nfts[0].cols = 3;
+    jsons.nfts[0].rows = 2;
     setFeaturedCards(jsons.nfts);
   }
   
